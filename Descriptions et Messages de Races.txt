@@ -1,0 +1,167 @@
+Altmer :
+
+Vous êtes donc un(e) Haut(e) Elfe, également appelé Altmer en langage plus vernaculaire. Votre race est la plus apte à la magie dans ce monde, et vous possédez donc une affinité particulière. Elle vous ovtroie 50 points de mana de base, et un bonus de réduction du coût des sorts de moitié. Cependant, votre carrure est frêle et vous avez du mal à porter du matériel trop lourd. De plus votre endurance n'est pas très développée, puisque vous vous reposez sur la magie.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 10
+Multiplicateur de régénération de vigueur : 5
+Multiplicateur de régénération de mana : 30
+Points de santé : 120
+Points de vigueur : 20
+Points de mana : 210 (160 de base avec le bonus racial supplémentaire intrinsèque des Hauts Elfes de 50)
+Portage : 130
+Dommages à mains nues : 4
+Bonus aux compétences : Illusion +10, Conjuration, Destruction, Alteration, Guérison, Enchantement +5
+Spécial : 50 pourcents de réduction du coût des sorts
+
+********************************************************************************************************************************************************************************************************
+
+Bosmer :
+
+Vous êtes donc un(e) Elfe des Bois, également appelé Bosmer en langage plus vernaculaire. Votre race est la plus éloignée de votre héritage ancestral. Vous manipulez la magie moins bien que vos congénères Altmers ou Dunmers, mais vous avea acquis, par la vie en forêt, une agilité sans pareil chez les Elfes. Votre discrétion est sans commune mesure également chez les autres races elfiques. Tout cela vous a permis d'acquérir une endurance plus élevée, ainsi votre vigueur est plus haute mais votre magie moins efficace.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 10
+Multiplicateur de régénération de vigueur : 20
+Multiplicateur de régénération de mana : 15
+Points de santé : 90
+Points de vigueur : 120
+Points de mana : 90
+Portage : 150
+Dommages à mains nues : 4
+Bonus aux compétences : Archerie +10, Crochetage, Discrétion, Armure Légère, Pickpocket, Alchimie +5
+Spécial : 10 pourcents de réduction du coût des sorts
+
+********************************************************************************************************************************************************************************************************
+
+Dunmer :
+
+Vous êtes donc un(e) Elfe Noir(e), également appelé Dunmer en langage plus vernaculaire. Votre race est plus proche que les Bosmers mais plus éloignée que les Altmers de votre héritage ancestral. Vous manipulez plus la magie de destruction mais moins celle d'illusion que les Altmers. Votre contrôle sur votre mana vous permet d'en gaspiller un tier de moins en lançant vos sorts, et votre endurance est meilleure également, du fait de votre utilisation plus fréquente d'armes de corps à corps.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 15
+Multiplicateur de régénération de vigueur : 10
+Multiplicateur de régénération de mana : 20
+Points de santé : 90
+Points de vigueur : 70
+Points de mana : 140
+Portage : 170
+Dommages à mains nues : 5
+Bonus aux compétences : Destruction +10, Illusion, Alteration, Armure Légère, Discrétion, Alchimie +5
+Spécial : 30 pourcents de réduction du coût des sorts
+
+********************************************************************************************************************************************************************************************************
+
+Khajiit :
+
+Vous êtes donc un(e) Khajiit(e), un homme chat. Souvent détesté à cause des préjugés, venant de la pauvreté de votre peuple généré par la domination du Domaine Aldmeri provoquant la nécessité de voler même chez les plus jeunes, votre présence en ville sera au mieux tolérée et surveillée, au pire refusée. Il est vrai que vous possédez les caractéristiques d'un voleur, discrétion, crochetage et fouille de poches, offertes par votre Déesse mère, mais vous saurez faire preuve de clémence envers la méfiance qu'inspire votre race aux autres.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 20
+Multiplicateur de régénération de vigueur : 15
+Multiplicateur de régénération de mana : 10
+Points de santé : 120
+Points de vigueur : 120
+Points de mana : 60
+Portage : 220
+Dommages à mains nues : 27 (10 + 12 pour les griffes = 22 de base, et bonus de 5)
+Bonus aux compétences : Discrétion +10, Armes à Une Main, Pickpocket, Crochetage, Archerie, Alchimie +5
+Spécial : 10 dégâts de plus par les griffes
+
+********************************************************************************************************************************************************************************************************
+
+Argonien :
+
+Vous êtes donc un(e) Argonien(ne), un homme lézard. Souvent persécuté pour votre apparence que certains jugent repoussante, votre peuple est également souvent exploité comme esclaves ou chair à canon dans les expéditions armées. De plus, vos compétences dignes d'un voleur vous rendent suspect dans beaucoup d'affaires criminelles même n'impliquant aucun vol. Pourtant, vous avez des compétences variées pouvant être utiles dans diverses situations, comme le soin ou la protection magique. Votre condition de reptile vous permet également de régénérer votre santé bien plus vite.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 20
+Multiplicateur de régénération de vigueur : 15
+Multiplicateur de régénération de mana : 10
+Points de santé : 140
+Points de vigueur : 120
+Points de mana : 40
+Portage : 220
+Dommages à mains nues : 17 (10 de base et bonus de 7)
+Bonus aux compétences : Crochetage +10, Armure Légère, Pickpocket, Discrétion, Alteration, Guérison +5
+Spécial :  15 dégâts de plus par les griffes
+
+********************************************************************************************************************************************************************************************************
+
+Nordique :
+
+Vous êtes donc un(e) Nordique, descendant de Talos d'Atmora. En tant que tel vous êtes chez vous ici. Votre race bénéficie d'un bonus dans l'armement lourd et une résistance au froid du fait de votre adaptation naturelle aux contrées gelées de Bordeciel. Cependant vous n'êtes pas doué pour la magie, étant plus tournée vers le combat ou les activités physiques. Vous souffrez donc d'une faible réserve de mana, mais votre endurance et votre vitalité sont très élevées et vous permettent de porter bien plus de matériel.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 20
+Multiplicateur de régénération de vigueur : 20
+Multiplicateur de régénération de mana : 5
+Points de santé : 150
+Points de vigueur : 130
+Points de mana : 20
+Portage : 250
+Dommages à mains nues : 9
+Bonus aux compétences : Armes à Deux Mains +10, Armure Légère, Armes à Une Main, Forge, Blocage, Eloquence +5
+Spécial : 10 pourcents d'efficacité de forge supplémentaire
+
+********************************************************************************************************************************************************************************************************
+
+Rougegarde :
+
+Vous êtes donc un(e) Rougegarde, guerrier des terres de Lenclume. Votre culture différente et votre volonté du combat, basée sur l'endurance et la résistance, font de vous un opposant formidable et polyvalent. Archerie, magie, blocage, vous savez vous débrouiller dans toutes les situations, et votre compétence unique vous permet de régénérer votre vigueur bien plus rapidement. De plus votre compétence en forge, qui égale celle des Nordiques et Orques, vous permet de forger vos lames courbes si étonnantes aux yeux des autres races.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 15
+Multiplicateur de régénération de vigueur : 20
+Multiplicateur de régénération de mana : 10
+Points de santé : 110
+Points de vigueur : 130
+Points de mana : 60
+Portage : 240
+Dommages à mains nues : 8
+Bonus aux compétences : Armes à Une Main +10, Blocage, Alteration, Archerie, Destruction, Forge +5
+Spécial : 10 pourcents d'efficacité de forge supplémentaire
+
+********************************************************************************************************************************************************************************************************
+
+Impérial :
+
+Vous êtes donc un(e) Impérial(e), figure d'autorité reconnue par toutes les races. Vous êtes souvent décrié en Bordeciel, votre race étant confondue avec l'orientation qu'a pris l'Empire, on oublie souvent que tous les Impériaux ne sont pas en faveur de l'Empereur, ou de ses idées. Vous êtes un soigneur né, mais également comme beaucoup de races, un bon enchanteur d'objets. Vous savez également vous servir de bien des armes et d'armures lourdes et de boucliers. Votre vitalité est moyenne et votre endurance et magie sont similaires, vous êtes polyvalent, et votre voix apaise les tensions.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 20
+Multiplicateur de régénération de vigueur : 15
+Multiplicateur de régénération de mana : 10
+Points de santé : 120
+Points de vigueur : 90
+Points de mana : 90
+Portage : 230
+Dommages à mains nues : 9
+Bonus aux compétences : Guérison +10, Destruction, Enchantement, Armure Lourde, Armes à Une Main, Blocage +5
+Spécial : 20 pourcents de réduction au coût des sorts de guérison
+
+********************************************************************************************************************************************************************************************************
+
+Bréton :
+
+Vous êtes donc un(e) Bréton(e), une race classée parfois dans les Hommes, parfois dans les Elfes. Et pour cause, votre race hérite des deux, puisqu'elle est née de l'union entre Humains et Elfes. Vous avez donc une affinité pour la magie qui vous permet de réduire un peu le coût de vos sorts. Votre compétence unique vous permet d'absorber la magie des sorts dirigés contre vous. Votre vitalité et votre endurance ne sont pas pour autant mauvaises mais vous pouvez porter un peu moins de matériel que les autres Humains.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 15
+Multiplicateur de régénération de vigueur : 10
+Multiplicateur de régénération de mana : 20
+Points de santé : 90
+Points de vigueur : 70
+Points de mana : 140
+Portage : 200
+Dommages à mains nues : 6
+Bonus aux compétences : Conjuration +10, Guérison, Alteration, Illusion, Alchimie, Eloquence +5
+Spécial : 20 pourcents de réduction du coût des sorts
+
+********************************************************************************************************************************************************************************************************
+
+Orque :
+
+Vous êtes donc un(e) Orque, une race puissante mais aussi crainte que respectée. Tantôt on aura peur de votre force physique démesurée, tantôt on la louera. On aura peur de votre Berserk naturel mais on reconnaîtra son utilité. Vous portez bien plus que les autres races et votre endurance est élevée, mais votre compétence en magie est aussi faible que celle des Nordiques. Beaucoup de votre race sont devenus enchanteurs ou mages, mais pourcela il faut un don de naissance ou un entraînement rigoureux. Cependant, dans votre culture c'est la forge qui prime, et beaucoup deviennent forgerons, les armes Orques sont célèbres de par le Monde entier.
+Caractéristiques raciales :
+Multiplicateur de régénération de santé : 25
+Multiplicateur de régénération de vigueur : 15
+Multiplicateur de régénération de mana : 5
+Points de santé : 160
+Points de vigueur : 120
+Points de mana : 20
+Portage : 280
+Dommages à mains nues : 11
+Bonus aux compétences : Armure Lourde +10, Forge, Blocage, Armes à Une Main, Armes à Deux Mains, Enchantement +5
+Spécial : 30 pourcents d'efficacité de forge supplémentaire
