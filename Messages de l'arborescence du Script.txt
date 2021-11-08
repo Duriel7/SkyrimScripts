@@ -1,0 +1,150 @@
+ID : DurielClassesRaceMessage01
+
+Titre : Confirmation de la Race
+
+Texte :
+Attention, ce choix est définitif, si vous choisissez une race différente de celle de votre personnage tant pis pour vous !
+Confirmez juste la race du personnage pour obtenir les bonus !
+
+****************************************************************************************************************************************
+
+ID :DurielClassesRaceMessage02 
+
+Titre : Confirmation de la Race
+
+Texte :
+Attention, ce choix est définitif, si vous choisissez une race différente de celle de votre personnage tant pis pour vous !
+Confirmez juste la race du personnage pour obtenir les bonus !
+
+****************************************************************************************************************************************
+
+ID : DurielClassesGenderMessage
+
+Titre : Confirmation du Genre
+
+Texte :
+Attention même avertissement ! Si vous choisissez le mauvais genre il n'y a pas de retour arrière !
+Confirmez juste le genre du personnage !
+
+****************************************************************************************************************************************
+
+ID : DurielClassesFirstMessage
+
+Titre : Choisir la Classe
+
+Texte :
+Vous allez maintenant pouvoir choisir la classe de votre personnage. L'un après l'autre vous devrez effectuer :
+La confirmation de la Race,
+La confirmation du Genre,
+Le choix de la Classe,
+Le choix de 0 à 3 métiers,
+Le choix concernant le Niveau de Richesse.
+Le processus est inarrêtable si vous le lancez maintenant donc prévoyez du temps. Attention ! L'initialisation du processus de choix de classe va remettre tous vos niveaux de compétence à 5 donc vous perdrez toute progression ! Vous êtes prévenu. Vous pouvez lire les Rouleaux du Destin qui vous ont été fournis avec le Grand Livre pour en apprendre plus sur les choix possibles.
+
+****************************************************************************************************************************************
+
+ID : DurielClassesChoiceMessage00
+
+Titre : Branches de classes
+
+Texte :
+Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
+Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Vous avez le choix entre ces branches :
+
+****************************************************************************************************************************************
+
+ID : DurielClassesChoiceMessage01
+
+Titre : Classes Physiques
+
+Texte :
+Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
+Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Vous avez le choix entre ces sous-branches :
+
+****************************************************************************************************************************************
+
+ID : DurielClassesChoiceMessage011
+
+Titre : Classes de Force
+
+Texte :
+Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
+Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Vous avez le choix entre ces classes :
+
+****************************************************************************************************************************************
+
+ID : DurielClassesChoiceMessage012
+
+Titre : Classes d'Agilité
+
+Texte :
+Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
+Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Vous avez le choix entre ces classes :
+
+****************************************************************************************************************************************
+
+ID : DurielClassesChoiceMessage02
+
+Titre : Classes Hybrides Physique/Magie
+
+Texte :
+Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
+Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Vous avez le choix entre ces classes :
+
+****************************************************************************************************************************************
+
+ID : DurielClassesChoiceMessage03
+
+Titre : Classes Hybrides Magie/Physique
+
+Texte :
+Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
+Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Vous avez le choix entre ces classes :
+
+****************************************************************************************************************************************
+
+ID : DurielClassesChoiceMessage04
+
+Titre : Classes de Magie
+
+Texte :
+Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
+Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Vous avez le choix entre ces classes :
+
+****************************************************************************************************************************************
+
+ID : DurielClassesChoiceMessage04Mage
+
+Titre : Type de Mage
+
+Texte :
+Pour le Mage, vous pourrez choisir un élément parmi le feu, la glace, ou la foudre. Vous recevrez un livre de sort de base correspondant à votre choix.
+
+****************************************************************************************************************************************
+
+ID : DurielClassesJobMessage
+
+Titre : Choisir les Métiers
+
+Texte :
+Vous pouvez choisir jusqu'à 3 métiers. Cliquer sur un métier déjà sélectionné vous proposera de l'enlever de votre liste pour en choisir un autre. Vous pouvez démarrer sans aucun métier si vous le souhaitez. Les métiers sont décrits dans les Rouleaux du Destin fournis avec le Grand Livre pour que vous puissiez apprendre leurs caractéristiques. Choisissez en fonction du RP de votre personnage plutôt que vous préférences statistiques.
+
+****************************************************************************************************************************************
+
+ID : DurielClassesWealthMessage
+
+Titre : Choisir le niveau de richesse
+
+Texte :
+Vous pouvez déterminer à quel point votre personnage est riche.
+Etes-vous sans le sou ?
+Etes-vous si riche que vous pourriez acheter deux ou trois maisons ?
+Etes-vous un notable ou un marchand  ou encore un riche explorateur ?
+Votre richesse vous regarde. Votre passé est la seule explication de celle-ci.
