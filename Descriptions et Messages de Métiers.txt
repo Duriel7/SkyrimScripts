@@ -1,0 +1,94 @@
+Forgeron :
+
+Choix :
+La forge. Un métier utile en tout temps mais encore plus en temps de guerre civile. Choisir ce métier confère des bonus à l'efficacité de l'arbre de forgeage qui permettent d'améliorer armes et armures à un niveau supérieur à celui qui serait atteignable en étant spécialisé dans un autre métier.
+Avantages : Efficacité de forge +50 pourcents + un peu de fer de corindon et d'acier et quelques morceaux de cuir
+
+Confirmation :
+"C'est vous qui avez forgé cette belle épée ?"
+Vous êtes forgeron(ne). Votre maître d'apprentissage vous a laissé partir mais vous avez acquis suffisamment pour prendre plusieurs commandes et tenir un commerce viable ainsi que vous équipez par vous-même.
+
+**********************************************************************************************************************
+
+Enchanteur :
+
+Choix :
+L'enchantement. Un métier prouvant sa puissance dans la guerre. Et pourtant il peut aussi être utilisé dans la vie quotidienne. Choisir ce métier offre un bonus d'efficacité pour les enchantements. Qu'ils soient offensifs défensifs ou de soutien.
+Avantages : Efficacité de l'enchantement +50 pourcents + un petit set de gemmes spirituelles vides et pleines
+
+Confirmation :
+"Vous ne voudriez pas enchanter mon épée ? Elle coupe à peine le beurre !"
+Vous êtes un enchanteur/tresse. Votre maître vous a confié ses connaissances et laissé voyager. Vous savez donner de la puissance à vos enchantements et pouvez commercer et vous équipez vous-même sans problème.
+
+**********************************************************************************************************************
+
+Alchimiste :
+
+Choix :
+L'alchimie. Un métier aux possibilités aussi vastes que méconnues. Des poisons aux soins en passant par les aides à la robustesse ou à la compréhension des métiers et disciplines du monde. Vous avez maîtrisé les bases. Vous en savez assez pour préparer n'importe quel type de potions et les vendre. Choisir ce métier confère une augmentation de l'efficacité des potions.
+Avantages : Efficacité des potions créées +50 pourcents + une sélection d'ingrédients de base
+
+
+Confirmation :
+"Hé vous faites des potions pas vrai ? Vous pourriez me faire une bière ?"
+Vous êtes alchimiste. Vous avez appris toutes les bases et connaissez les ingrédients basiques. Vous saurez reconnaître les propriétés de ceux que n'avez pas encore utilisés et saurez créer des potions afin de les vendre ou les utilisez vous-mêmes pour votre compte.
+
+**********************************************************************************************************************
+
+Aventurier :
+
+Choix :
+Ah l'aventure... se battre contre des créatures, récolter des matériaux, chasser des animaux, tout ça pour aider les habitants par l'intermédiaire des guildes ou le faire en solo. C'est la belle vie. Choisir le métier d'Aventurier vous procure un léger bonus à toutes vos compétences de terrain.
+Avantages : Armes à Une et Deux Mains, Blocage, Archerie, Armures Légère et Lourde, Crochetage et Discrétion : +5
+
+Confirmation :
+"Moi aussi j'étais Aventurier autrefois, et puis j'ai pris une flèche dans le genou !"
+Vous êtes un(e) Aventurier/rière. Une personne capable de se débrouiller dans toutes les situations risquées et connaissant les dangers de la route et des landes froides de Bordeciel. Vos compétences de combat sont meilleures que la plupart des soldats.
+
+**********************************************************************************************************************
+
+Mercenaire :
+
+Choix :
+Le mercenariat. Un style de vie particulier. Vous combattez et accomplissez des tâches pour l'argent que vous donnent vos employeurs. On dirait presque un Aventurier, mais ce n'est pas tout à fait pareil. Votre entraînement aux armes est plus rigoureux et vos compétences martiales sont de fait plus acérées.
+Avantages : Armures Légère et Lourde et Eloquence : +10 ; +20 pourcents de multiplicateur de dégâts des Armes à Une et Deux Mains ; +500 Septims
+
+Confirmation :
+"C'est l'armure des mercenaires que vous portez. Ça c'est la vie."
+Vous êtes Mercenaire. Vous allez de ville en ville et de place en place pour trouver du travail, impliquant principalement de se battre. Vous étiez dans une bande ou en solitaire mais maintenant ce qui est sûr, c'est que vous êtes solitaire pour de bon. Vous trouverez sans doute des personnes susceptibles de se joindre à vous.
+
+**********************************************************************************************************************
+
+Barde :
+
+Choix :
+Barde. Un métier rempli de notes tantôt bonnes tantôt mauvaises. Il s'agit juste de ne pas faire de fausses notes. Vous saurez peut-être convaincre subtilement les habitants de vous donner les informations dont vous avez besoin. Ou alors vous enchanterez les clients des tavernes à la nuit tombées pour leur permettre d'oublier leurs tourments.
+Avantages : +100 Septims ; Eloquence : +10 et efficacité de l'éloquence +30 ; 1 luth
+
+Confirmation :
+"J'ai entendu parler de vous, et de vos belles paroles..."
+Vous êtes désormais Barde ! Un magnifique métier qui rempli le monde de joie et de mélodies et gagner de l'argent avec vos chansons. Vous pourrez aussi vous aventurer en dehors des villes. Il y a aussi des aventuriers et des gardes qui pourraient avoir besoin de vous !
+
+**********************************************************************************************************************
+
+Marchand :
+
+Choix :
+Marchand. Ce métier qui vous rend si particulier aux yeux des gens. Une fois vous êtes une généreuse personne, l'autre fois vous êtes le vil serpent qui prenez l'argent du pauvre hère. Ce qu'ils ne comprennent pas, c'est que la vie est dure pour tout le monde. Vous pourrez peut-être parfois faire preuve de retenue dans vos affaires.
+Avantages : +500 Septims ; Eloquence : +20 et efficacité de l'éloquence +50
+
+Confirmation :
+"Ne pensez pas négocier avec moi comme si j'étais un de ces fichus marchands !"
+Vous êtes maintenant Marchand(e). Négocier, vendre, acheter, étoffer le marché, vous savez tout faire. Vous avez encore à apprendre mais votre expertise des marchés du Nord vous permettra de vous en tirer à bon prix.
+
+**********************************************************************************************************************
+
+Chasseur :
+
+Choix :
+Le métier de Chasseur. Un métier tellement utile qu'on ne peut tout dire. Tuer des animaux pour vendre leur viande aux affamés, leurs peaux aux mourrants de froid, et leurs organes aux alchimistes. Qu'y a-t-il de plus beau que d'honorer Dame Nature en prenant ce qu'elle nous offre pour en utiliser toute l'essence ? Le métier de Chasseur permet la survie non pas d'un mais de tout le monde.
+Avantages : Arcs de Chasse et quelques flèches ; quelques viandes et peaux ; des organes d'animaux ; 1 couteau en fer et Efficacité des Arcs et Arbalètes +50
+
+Confirmation :
+"De la viande fraîche tous les jours, tout droit venue des bois !"
+Vous êtes désormais Chasseur/euse. Vous faites du commerce de vos proies et pouvez satisfaire nombre de secteurs du marché grâce à vos talents. Votre compétence est d'utilité publique et reconnue par tous.
