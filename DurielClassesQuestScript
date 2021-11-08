@@ -1,0 +1,16 @@
+scriptName DurielClassesQuestScript extends Quest Hidden
+
+; Properties are declared here -----------------------------------------------------
+Book Property descBook  Auto
+Book Property fateBook  Auto
+
+; This function is to initialize the quest
+function OnInit()
+	
+	;give the book once ------------------------------------------------------------
+	if game.GetPlayer().GetLevel() < 2
+		game.GetPlayer().additem(descBook , 1, true)
+		game.GetPlayer().additem(fateBook , 1, true)
+	endif
+	
+endFunction
