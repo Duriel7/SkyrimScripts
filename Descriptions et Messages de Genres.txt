@@ -7,5 +7,5 @@ Ces caractéristiques physiologiques s'ajoutent à, ou compensent celles de votr
 
 Femme :
 
-En tant que femme, vous possédez une force physique légèrement moins importante qui vous prénalise pour porter des objets, -20 de poids, et pour frapper à mains nues, pour 2 points de dégâts en moins.
+En tant que femme, vous possédez une force physique légèrement moins importante qui vous pénalise pour porter des objets, -20 de poids, et pour frapper à mains nues, pour 2 points de dégâts en moins.
 Ces caractéristiques physiologiques s'ajoutent à, ou compensent celles de votre race, et peuvent être surcompensés par vos bonus de classe ou vos choix de vie, ainsi que des objets si besoin.
