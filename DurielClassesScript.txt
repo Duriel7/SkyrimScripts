@@ -1,0 +1,2196 @@
+scriptName DurielClassesScript extends ObjectReference
+
+; Variables are declared here ----------------------------------------------------------
+int jobChoiceNumber = 0
+bool jobSmith
+bool jobEnchanter
+bool jobAlchemist
+bool jobAdventurer
+bool jobMercenary
+bool jobBard
+bool jobMerchant
+bool jobHunter
+
+; Properties are declared here ---------------------------------------------------------
+message property DurielClassesFirstMessage auto
+message property DurielClassesFinalMessage auto
+message property DurielClassesRaceMessage01 auto
+message property DurielClassesRaceMessage02 auto
+message property DurielClassesGenderMessage auto
+message property DurielClassesChoiceMessage00 auto
+message property DurielClassesChoiceMessage011 auto
+message property DurielClassesChoiceMessage012 auto
+message property DurielClassesChoiceMessage02 auto
+message property DurielClassesChoiceMessage03 auto
+message property DurielClassesChoiceMessage04 auto
+message property DurielClassesChoiceMessage04Mage auto
+message property DurielClassesJobMessage auto
+message property DurielClassesJobMessageEmpty auto
+message property DurielClassesJobDelete auto
+message property DurielClassesJobMessageFull auto
+message property DurielClassesWealthMessage auto
+message property DurielClassesWealthConfirmation auto
+message property DurielClasses01Enforcer auto
+message property DurielClasses01EnforcerConfirmed auto
+message property DurielClasses02Ranger auto
+message property DurielClasses02RangerConfirmed auto
+message property DurielClasses03Knight auto
+message property DurielClasses03KnightConfirmed auto
+message property DurielClasses04Berserker auto
+message property DurielClasses04BerserkerConfirmed auto
+message property DurielClasses05Samurai auto
+message property DurielClasses05SamuraiConfirmed auto
+message property DurielClasses06Swordmaster auto
+message property DurielClasses06SwordmasterConfirmed auto
+message property DurielClasses07Sniper auto
+message property DurielClasses07SniperConfirmed auto
+message property DurielClasses08Thief auto
+message property DurielClasses08ThiefConfirmed auto
+message property DurielClasses09Assassin auto
+message property DurielClasses09AssassinConfirmed auto
+message property DurielClasses10Ronin auto
+message property DurielClasses10RoninConfirmed auto
+message property DurielClasses11Templar auto
+message property DurielClasses11TemplarConfirmed auto
+message property DurielClasses12Paladin auto
+message property DurielClasses12PaladinConfirmed auto
+message property DurielClasses13DreadKnight auto
+message property DurielClasses13DreadKnightConfirmed auto
+message property DurielClasses14Duelist auto
+message property DurielClasses14DuelistConfirmed auto
+message property DurielClasses15NightBlade auto
+message property DurielClasses15NightBladeConfirmed auto
+message property DurielClasses16Monk auto
+message property DurielClasses16MonkConfirmed auto
+message property DurielClasses17Pilgrim auto
+message property DurielClasses17PilgrimConfirmed auto
+message property DurielClasses18NatureArcher auto
+message property DurielClasses18NatureArcherConfirmed auto
+message property DurielClasses19Priest auto
+message property DurielClasses19PriestConfirmed auto
+message property DurielClasses20Warlock auto
+message property DurielClasses20WarlockConfirmed auto
+message property DurielClasses21Mageknight auto
+message property DurielClasses21MageknightConfirmed auto
+message property DurielClasses22Battlemage auto
+message property DurielClasses22BattlemageConfirmed auto
+message property DurielClasses23Guardian auto
+message property DurielClasses23GuardianConfirmed auto
+message property DurielClasses24Witchhunter auto
+message property DurielClasses24WitchhunterConfirmed auto
+message property DurielClasses25Mage auto
+message property DurielClasses25MageConfirmed auto
+message property DurielClasses26Sage auto
+message property DurielClasses26SageConfirmed auto
+message property DurielClasses27Druid auto
+message property DurielClasses27DruidConfirmed auto
+message property DurielClasses28Necromancer auto
+message property DurielClasses28NecromancerConfirmed auto
+message property DurielClasses29Divinity auto
+message property DurielClasses29DivinityConfirmed auto
+message property DurielClasses001JobBlacksmith auto
+message property DurielClasses001JobBlacksmithConfirmed auto
+message property DurielClasses002JobEnchanter auto
+message property DurielClasses002JobEnchanterConfirmed auto
+message property DurielClasses003JobAlchemist auto
+message property DurielClasses003JobAlchemistConfirmed auto
+message property DurielClasses004JobAdventurer auto
+message property DurielClasses004JobAdventurerConfirmed auto
+message property DurielClasses005JobMercenary auto
+message property DurielClasses005JobMercenaryConfirmed auto
+message property DurielClasses006JobBard auto
+message property DurielClasses006JobBardConfirmed auto
+message property DurielClasses007JobMerchant auto
+message property DurielClasses007JobMerchantConfirmed auto
+message property DurielClasses008JobHunter auto
+message property DurielClasses008JobHunterConfirmed auto
+message property DurielClassesRaceAltmer auto
+message property DurielClassesRaceBosmer auto
+message property DurielClassesRaceDunmer auto
+message property DurielClassesRaceKhajiit auto
+message property DurielClassesRaceArgonian auto
+message property DurielClassesRaceNord auto
+message property DurielClassesRaceRedguard auto
+message property DurielClassesRaceImperial auto
+message property DurielClassesRaceBreton auto
+message property DurielClassesRaceOrc auto
+message property DurielClassesGenderMale auto
+message property DurielClassesGenderFemale auto
+
+spell property SparksSpell auto
+spell property FurySpell auto
+spell property ConjureFamiliarSpell auto
+
+miscobject property Gold001 auto
+miscobject property iLute auto
+miscobject property IronIngot auto
+miscobject property IronOre auto
+miscobject property CorundumIngot auto
+miscobject property SteelIngot auto
+miscobject property Leather auto
+miscobject property Tusk auto
+miscobject property DeerHide auto
+
+potion property Venison auto
+potion property HorkerMeat auto
+
+soulgem property GemPetty auto
+soulgem property GemPettyFilled auto
+soulgem property GemLesser auto
+soulgem property GemLesserFilled auto
+soulgem property GemGreater auto
+soulgem property GemGreaterFilled auto
+soulgem property GemGrand auto
+soulgem property GemGrandFilled auto
+
+ingredient property MountainFlowerBlue auto
+ingredient property MountainFlowerPurple auto
+ingredient property MountainFlowerRed auto
+ingredient property Mush01 auto
+ingredient property Mush02 auto
+ingredient property Mush03 auto
+ingredient property Mush04 auto
+ingredient property Mush06 auto
+ingredient property ingJazBay auto
+ingredient property ingJuniperBerries auto
+ingredient property ingNirnroot auto
+ingredient property fishScales auto
+ingredient property Cotton auto
+ingredient property ingFireflyThorax auto
+ingredient property Sap auto
+ingredient property ingTaproot auto
+ingredient property Antlers auto
+
+armor property IronBoots auto
+armor property IronCuirass auto
+armor property IronGauntlets auto
+armor property IronShield auto
+armor property SteelBoots auto
+armor property SteelCuirass auto
+armor property SteelGauntlets auto
+armor property SteelShield auto
+armor property SteelHelmet auto
+armor property SteelPlateBoots auto
+armor property SteelPlateCuirass auto
+armor property SteelPlateGauntlets auto
+armor property SteelPlateHelmet auto
+armor property LeatherBoots auto
+armor property LeatherCuirass auto
+armor property LeatherGauntlets auto
+armor property LeatherHelmet auto
+armor property ScaledBoots auto
+armor property ScaledCuirass auto
+armor property ScaledGauntlets auto
+armor property ScaledHelmet auto
+armor property BladesBoots auto
+armor property BladesCuirass auto
+armor property BladesGauntlets auto
+armor property BladesHelmet auto
+armor property HideBoots auto
+armor property HideCuirass auto
+armor property HideGauntlets auto
+armor property HideShield auto
+armor property EbonyShield auto
+armor property MonkRobesRed auto
+armor property ChefShoes auto
+armor property MonkRobes auto
+armor property MonkBoots auto
+
+weapon property wIronSword auto
+weapon property wIronGreatSword auto
+weapon property wEbonySword auto
+weapon property Katana auto
+weapon property wIronDagger auto
+weapon property wLongBow auto
+weapon property wHuntingBow auto
+weapon property CrossBow auto
+
+ammo property aIronArrow auto
+ammo property aSteelArrow auto
+ammo property Bolt auto
+
+book property TomeHealingHands auto
+book property TomeBoundSword auto
+book property TomeBoundBow auto
+book property TomeFlames auto
+book property TomeFrostbite auto
+book property TomeSparks auto
+book property TomeZombie auto
+book property descBook auto
+
+; Initialization function for when you open the book ------------------------------------
+Event OnRead()
+	
+	self.OnReading()
+
+EndEvent
+
+; This function will make a proper base for classes to be assigned ----------------------
+function OnReading()
+	
+	int firstButton = DurielClassesFirstMessage.show()
+	if firstButton == 0
+		; Here carryweight will be reduced by 100
+		game.Getplayer().modav("carryweight", -100)
+		
+		; Here all skills will be set to 5
+		game.Getplayer().setav("illusion", 5)
+		game.Getplayer().setav("conjuration", 5)
+		game.Getplayer().setav("destruction", 5)
+		game.Getplayer().setav("restoration", 5)
+		game.Getplayer().setav("alteration", 5)
+		game.Getplayer().setav("enchanting", 5)
+		game.Getplayer().setav("smithing", 5)
+		game.Getplayer().setav("heavyarmor", 5)
+		game.Getplayer().setav("block", 5)
+		game.Getplayer().setav("lightarmor", 5)
+		game.Getplayer().setav("twohanded", 5)
+		game.Getplayer().setav("onehanded", 5)
+		game.Getplayer().setav("marksman", 5)
+		game.Getplayer().setav("sneak", 5)
+		game.Getplayer().setav("lockpicking", 5)
+		game.Getplayer().setav("pickpocket", 5)
+		game.Getplayer().setav("speechcraft", 5)
+		game.Getplayer().setav("alchemy", 5)
+		
+		; Here the racial starting spells are removed ------------------------------------
+		game.Getplayer().removespell(SparksSpell)
+		game.Getplayer().removespell(FurySpell)
+		game.Getplayer().removespell(ConjureFamiliarSpell)
+		
+		; Here the multipliers for regenerations are cut to 5 instead of 100 -------------
+		game.Getplayer().setav("healratemult", 5)
+		game.Getplayer().setav("staminaratemult", 5)
+		game.Getplayer().setav("magickaratemult", 5)
+		
+		; Here all inventory items are removed -------------------------------------------
+		game.GetPlayer().removeallitems()
+		; And readd the book -------------------------------------------------------------
+		game.Getplayer().additem(descBook, 1,true)
+		
+		; Function call to begin choose your class following RP needs --------------------
+		self.RaceMenu01(0)
+	else
+		game.Getplayer().additem(descBook, 1,true)
+		debug.messagebox("Ne tardez pas trop !")
+	endif
+	
+endFunction
+
+; Here are the functions to choose if you want to confirm the race of the character -------
+
+function RaceMenu01 (Int choiceButton)
+	
+	choiceButton = DurielClassesRaceMessage01.Show()
+	if choiceButton == 0
+		self.Altmer(0)
+	elseif choiceButton == 1
+		self.Bosmer(0)
+	elseif choiceButton == 2
+		self.Dunmer(0)
+	elseif choiceButton == 3
+		self.Khajiit(0)
+	elseif choiceButton == 4
+		self.Argonian(0)
+	elseif choiceButton == 5
+		self.RaceMenu02(0)
+	endif
+	
+endFunction
+
+function RaceMenu02 (Int choiceButton)
+	
+	choiceButton = DurielClassesRaceMessage02.Show()
+	if choiceButton == 0
+		self.RaceMenu01(0)
+	elseif choiceButton == 1
+		self.Nord(0)
+	elseif choiceButton == 2
+		self.Redguard(0)
+	elseif choiceButton == 3
+		self.Imperial(0)
+	elseif choiceButton == 4
+		self.Breton(0)
+	elseif choiceButton == 5
+		self.Orc(0)
+	endif
+	
+endFunction
+
+; Here are the race functions that are called on confirmation -----------------------------
+function Altmer (Int ibutton)
+	
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 10)
+	game.Getplayer().setav("magickaratemult", 30)
+	game.Getplayer().setav("health", 120)
+	game.Getplayer().setav("stamina", 20)
+	game.Getplayer().setav("magicka", 210)
+	game.Getplayer().modav("carryweight", -70)
+	game.Getplayer().modav("unarmeddamage", 5)
+	game.Getplayer().setav("illusion", game.Getplayer().getav("illusion") + 10)
+	game.Getplayer().setav("conjuration", game.Getplayer().getav("conjuration") + 5)
+	game.Getplayer().setav("destruction", game.Getplayer().getav("destruction") + 5)
+	game.Getplayer().setav("alteration", game.Getplayer().getav("alteration") + 5)
+	game.Getplayer().setav("restoration", game.Getplayer().getav("restoration") + 5)
+	game.Getplayer().setav("enchanting", game.Getplayer().getav("enchanting") + 5)
+	game.Getplayer().modav("destructionmod", 50)
+	game.Getplayer().modav("restorationmod", 50)
+	game.Getplayer().modav("alterationmod", 50)
+	game.Getplayer().modav("conjurationmod", 50)
+	game.Getplayer().modav("illusionmod", 50)
+	
+	ibutton = DurielClassesRaceAltmer.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+function Bosmer (Int ibutton)
+
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 10)
+	game.Getplayer().setav("staminaratemult", 20)
+	game.Getplayer().setav("magickaratemult", 15)
+	game.Getplayer().setav("health", 90)
+	game.Getplayer().setav("stamina", 120)
+	game.Getplayer().setav("magicka", 90)
+	game.Getplayer().modav("carryweight", -50)
+	game.Getplayer().modav("unarmeddamage", 5)
+	game.Getplayer().setav("marksman", game.Getplayer().getav("marksman") + 10)
+	game.Getplayer().setav("sneak", game.Getplayer().getav("sneak") + 5)
+	game.Getplayer().setav("lockpicking", game.Getplayer().getav("lockpicking") + 5)
+	game.Getplayer().setav("pickpocket", game.Getplayer().getav("pickpocket") + 5)
+	game.Getplayer().setav("lightarmor", game.Getplayer().getav("lightarmor") + 5)
+	game.Getplayer().setav("alchemy", game.Getplayer().getav("alchemy") + 5)
+	game.Getplayer().modav("destructionmod", 10)
+	game.Getplayer().modav("restorationmod", 10)
+	game.Getplayer().modav("alterationmod", 10)
+	game.Getplayer().modav("conjurationmod", 10)
+	game.Getplayer().modav("illusionmod", 10)
+	
+	ibutton = DurielClassesRaceBosmer.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+function Dunmer (Int ibutton)
+
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 15)
+	game.Getplayer().setav("staminaratemult", 10)
+	game.Getplayer().setav("magickaratemult", 20)
+	game.Getplayer().setav("health", 90)
+	game.Getplayer().setav("stamina", 70)
+	game.Getplayer().setav("magicka", 140)
+	game.Getplayer().modav("carryweight", -30)
+	game.Getplayer().modav("unarmeddamage", 5)
+	game.Getplayer().setav("destruction", game.Getplayer().getav("destruction") + 10)
+	game.Getplayer().setav("sneak", game.Getplayer().getav("sneak") + 5)
+	game.Getplayer().setav("illusion", game.Getplayer().getav("illusion") + 5)
+	game.Getplayer().setav("alteration", game.Getplayer().getav("alteration") + 5)
+	game.Getplayer().setav("lightarmor", game.Getplayer().getav("lightarmor") + 5)
+	game.Getplayer().setav("alchemy", game.Getplayer().getav("alchemy") + 5)
+	game.Getplayer().modav("destructionmod", 30)
+	game.Getplayer().modav("restorationmod", 30)
+	game.Getplayer().modav("alterationmod", 30)
+	game.Getplayer().modav("conjurationmod", 30)
+	game.Getplayer().modav("illusionmod", 30)
+	
+	ibutton = DurielClassesRaceDunmer.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+function Khajiit (Int ibutton)
+
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 20)
+	game.Getplayer().setav("staminaratemult", 15)
+	game.Getplayer().setav("magickaratemult", 10)
+	game.Getplayer().setav("health", 120)
+	game.Getplayer().setav("stamina", 120)
+	game.Getplayer().setav("magicka", 60)
+	game.Getplayer().modav("carryweight", 20)
+	game.Getplayer().modav("unarmeddamage", 10)
+	game.Getplayer().setav("sneak", game.Getplayer().getav("sneak") + 10)
+	game.Getplayer().setav("marksman", game.Getplayer().getav("marksman") + 5)
+	game.Getplayer().setav("onehanded", game.Getplayer().getav("onehanded") + 5)
+	game.Getplayer().setav("lockpicking", game.Getplayer().getav("lockpicking") + 5)
+	game.Getplayer().setav("pickpocket", game.Getplayer().getav("pickpocket") + 5)
+	game.Getplayer().setav("alchemy", game.Getplayer().getav("alchemy") + 5)
+	
+	ibutton = DurielClassesRaceKhajiit.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+function Argonian (Int ibutton)
+
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 20)
+	game.Getplayer().setav("staminaratemult", 15)
+	game.Getplayer().setav("magickaratemult", 10)
+	game.Getplayer().setav("health", 140)
+	game.Getplayer().setav("stamina", 120)
+	game.Getplayer().setav("magicka", 40)
+	game.Getplayer().modav("carryweight", 20)
+	game.Getplayer().modav("unarmeddamage", 15)
+	game.Getplayer().setav("lockpicking", game.Getplayer().getav("lockpicking") + 10)
+	game.Getplayer().setav("sneak", game.Getplayer().getav("sneak") + 5)
+	game.Getplayer().setav("restoration", game.Getplayer().getav("restoration") + 5)
+	game.Getplayer().setav("alteration", game.Getplayer().getav("alteration") + 5)
+	game.Getplayer().setav("pickpocket", game.Getplayer().getav("pickpocket") + 5)
+	game.Getplayer().setav("lightarmor", game.Getplayer().getav("lightarmor") + 5)
+	
+	ibutton = DurielClassesRaceArgonian.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+function Nord (Int ibutton)
+	
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 20)
+	game.Getplayer().setav("staminaratemult", 20)
+	game.Getplayer().setav("magickaratemult", 5)
+	game.Getplayer().setav("health", 150)
+	game.Getplayer().setav("stamina", 130)
+	game.Getplayer().setav("magicka", 20)
+	game.Getplayer().modav("carryweight", 50)
+	game.Getplayer().modav("unarmeddamage", 15)
+	game.Getplayer().setav("twohanded", game.Getplayer().getav("twohanded") + 10)
+	game.Getplayer().setav("onehanded", game.Getplayer().getav("onehanded") + 5)
+	game.Getplayer().setav("smithing", game.Getplayer().getav("smithing") + 5)
+	game.Getplayer().setav("lightarmor", game.Getplayer().getav("lightarmor") + 5)
+	game.Getplayer().setav("block", game.Getplayer().getav("block") + 5)
+	game.Getplayer().setav("speechcraft", game.Getplayer().getav("speechcraft") + 5)
+	game.Getplayer().modav("smithingpowermod", 10)
+	
+	ibutton = DurielClassesRaceNord.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+function Redguard (Int ibutton)
+
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 15)
+	game.Getplayer().setav("staminaratemult", 20)
+	game.Getplayer().setav("magickaratemult", 10)
+	game.Getplayer().setav("health", 110)
+	game.Getplayer().setav("stamina", 130)
+	game.Getplayer().setav("magicka", 60)
+	game.Getplayer().modav("carryweight", 40)
+	game.Getplayer().modav("unarmeddamage", 12)
+	game.Getplayer().setav("onehanded", game.Getplayer().getav("onehanded") + 10)
+	game.Getplayer().setav("marksman", game.Getplayer().getav("marksman") + 5)
+	game.Getplayer().setav("smithing", game.Getplayer().getav("smithing") + 5)
+	game.Getplayer().setav("alteration", game.Getplayer().getav("alteration") + 5)
+	game.Getplayer().setav("block", game.Getplayer().getav("block") + 5)
+	game.Getplayer().setav("destruction", game.Getplayer().getav("destruction") + 5)
+	game.Getplayer().modav("smithingpowermod", 10)
+	
+	ibutton = DurielClassesRaceRedguard.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+function Imperial (Int ibutton)
+
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 20)
+	game.Getplayer().setav("staminaratemult", 15)
+	game.Getplayer().setav("magickaratemult", 10)
+	game.Getplayer().setav("health", 120)
+	game.Getplayer().setav("stamina", 90)
+	game.Getplayer().setav("magicka", 90)
+	game.Getplayer().modav("carryweight", 30)
+	game.Getplayer().modav("unarmeddamage", 15)
+	game.Getplayer().setav("restoration", game.Getplayer().getav("restoration") + 10)
+	game.Getplayer().setav("onehanded", game.Getplayer().getav("onehanded") + 5)
+	game.Getplayer().setav("enchanting", game.Getplayer().getav("enchanting") + 5)
+	game.Getplayer().setav("heavyarmor", game.Getplayer().getav("heavyarmor") + 5)
+	game.Getplayer().setav("destruction", game.Getplayer().getav("destruction") + 5)
+	game.Getplayer().setav("block", game.Getplayer().getav("block") + 5)
+	game.Getplayer().modav("restorationmod", 20)
+	
+	ibutton = DurielClassesRaceImperial.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+function Breton (Int ibutton)
+
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 15)
+	game.Getplayer().setav("staminaratemult", 10)
+	game.Getplayer().setav("magickaratemult", 20)
+	game.Getplayer().setav("health", 90)
+	game.Getplayer().setav("stamina", 70)
+	game.Getplayer().setav("magicka", 140)
+	game.Getplayer().modav("unarmeddamage", 10)
+	game.Getplayer().setav("conjuration", game.Getplayer().getav("conjuration") + 10)
+	game.Getplayer().setav("speechcraft", game.Getplayer().getav("speechcraft") + 5)
+	game.Getplayer().setav("alchemy", game.Getplayer().getav("alchemy") + 5)
+	game.Getplayer().setav("alteration", game.Getplayer().getav("alteration") + 5)
+	game.Getplayer().setav("illusion", game.Getplayer().getav("illusion") + 5)
+	game.Getplayer().setav("restoration", game.Getplayer().getav("restoration") + 5)
+	game.Getplayer().modav("destructionmod", 20)
+	game.Getplayer().modav("restorationmod", 20)
+	game.Getplayer().modav("alterationmod", 20)
+	game.Getplayer().modav("conjurationmod", 20)
+	game.Getplayer().modav("illusionmod", 20)
+	
+	ibutton = DurielClassesRaceBreton.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+function Orc (Int ibutton)
+
+	; Bonus for this race are as follows --------------------------------------------------
+	game.Getplayer().setav("healratemult", 25)
+	game.Getplayer().setav("staminaratemult", 15)
+	game.Getplayer().setav("magickaratemult", 5)
+	game.Getplayer().setav("health", 160)
+	game.Getplayer().setav("stamina", 120)
+	game.Getplayer().setav("magicka", 20)
+	game.Getplayer().modav("carryweight", 80)
+	game.Getplayer().modav("unarmeddamage", 20)
+	game.Getplayer().setav("onehanded", game.Getplayer().getav("onehanded") + 10)
+	game.Getplayer().setav("marksman", game.Getplayer().getav("marksman") + 5)
+	game.Getplayer().setav("smithing", game.Getplayer().getav("smithing") + 5)
+	game.Getplayer().setav("alteration", game.Getplayer().getav("alteration") + 5)
+	game.Getplayer().setav("block", game.Getplayer().getav("block") + 5)
+	game.Getplayer().setav("destruction", game.Getplayer().getav("destruction") + 5)
+	game.Getplayer().modav("smithingpowermod", 30)
+	
+	ibutton = DurielClassesRaceOrc.Show()
+	if ibutton == 0
+		self.GenderMenu(0)
+	endif
+
+endFunction
+
+; Here are the gender choice functions ---------------------------------------------------
+function GenderMenu (Int choiceButton)
+
+	choiceButton = DurielClassesGenderMessage.Show(0)
+	if choiceButton == 0
+		DurielClassesGenderMale.Show()
+		game.Getplayer().modav("carryweight", 20)
+		game.Getplayer().modav("unarmeddamage", 2)
+		self.ClassMenu(0)
+	elseif choiceButton == 1
+		DurielClassesGenderFemale.Show()
+		game.Getplayer().modav("carryweight", -20)
+		game.Getplayer().modav("unarmeddamage", -2)
+		self.ClassMenu(0)
+	endif
+
+endFunction
+
+; Here are the class functions -----------------------------------------------------------
+function ClassMenu (Int choiceButton)
+
+	choiceButton = DurielClassesChoiceMessage00.Show()
+	if choiceButton == 0
+		self.Force(0)
+	elseif choiceButton == 1
+		self.Agility(0)
+	elseif choiceButton == 2
+		self.PhysMag(0)
+	elseif choiceButton == 3
+		self.MagPhys(0)
+	elseif choiceButton == 4
+		self.Magic(0)
+	endif
+
+endFunction
+
+; Functions for class branches -----------------------------------------------------------
+function Force (Int choiceButton)
+
+	choiceButton = DurielClassesChoiceMessage011.Show()
+	if choiceButton == 0
+		choiceButton = DurielClasses01Enforcer.Show()
+		if choiceButton == 0
+			self.Enforcer(0)
+		elseif choiceButton == 1
+			self.Force(0)
+		endif
+	elseif choiceButton == 1
+		choiceButton = DurielClasses02Ranger.Show()
+		if choiceButton == 0
+			self.Ranger(0)
+		elseif choiceButton == 1
+			self.Force(0)
+		endif
+	elseif choiceButton == 2
+		choiceButton = DurielClasses03Knight.Show()
+		if choiceButton == 0
+			self.Knight(0)
+		elseif choiceButton == 1
+			self.Force(0)
+		endif
+	elseif choiceButton == 3
+		choiceButton = DurielClasses04Berserker.Show()
+		if choiceButton == 0
+			self.Berserker(0)
+		elseif choiceButton == 1
+			self.Force(0)
+		endif
+	elseif choiceButton == 4
+		choiceButton = DurielClasses05Samurai.Show()
+		if choiceButton == 0
+			self.Samurai(0)
+		elseif choiceButton == 1
+			self.Force(0)
+		endif
+	elseif choiceButton == 5
+		self.ClassMenu(0)
+	endif
+
+endFunction
+
+function Agility (Int choiceButton)
+
+	choiceButton = DurielClassesChoiceMessage012.Show()
+	if choiceButton == 0
+		choiceButton = DurielClasses06Swordmaster.Show()
+		if choiceButton == 0
+			self.Swordmaster(0)
+		elseif choiceButton == 1
+			self.Agility(0)
+		endif
+	elseif choiceButton == 1
+		choiceButton = DurielClasses07Sniper.Show()
+		if choiceButton == 0
+			self.Sniper(0)
+		elseif choiceButton == 1
+			self.Agility(0)
+		endif
+	elseif choiceButton == 2
+		choiceButton = DurielClasses08Thief.Show()
+		if choiceButton == 0
+			self.Thief(0)
+		elseif choiceButton == 1
+			self.Agility(0)
+		endif
+	elseif choiceButton == 3
+		choiceButton = DurielClasses09Assassin.Show()
+		if choiceButton == 0
+			self.Assassin(0)
+		elseif choiceButton == 1
+			self.Agility(0)
+		endif
+	elseif choiceButton == 4
+		choiceButton = DurielClasses10Ronin.Show()
+		if choiceButton == 0
+			self.Ronin(0)
+		elseif choiceButton == 1
+			self.Agility(0)
+		endif
+	elseif choiceButton == 5
+		self.ClassMenu(0)
+	endif
+
+endFunction
+
+function PhysMag (Int choiceButton)
+
+	choiceButton = DurielClassesChoiceMessage02.Show()
+	if choiceButton == 0
+		choiceButton = DurielClasses11Templar.Show()
+		if choiceButton == 0
+			self.Templar(0)
+		elseif choiceButton == 1
+			self.PhysMag(0)
+		endif
+	elseif choiceButton == 1
+		choiceButton = DurielClasses12Paladin.Show()
+		if choiceButton == 0
+			self.Paladin(0)
+		elseif choiceButton == 1
+			self.PhysMag(0)
+		endif
+	elseif choiceButton == 2
+		choiceButton = DurielClasses13DreadKnight.Show()
+		if choiceButton == 0
+			self.DreadKnight(0)
+		elseif choiceButton == 1
+			self.PhysMag(0)
+		endif
+	elseif choiceButton == 3
+		choiceButton = DurielClasses14Duelist.Show()
+		if choiceButton == 0
+			self.Duelist(0)
+		elseif choiceButton == 1
+			self.PhysMag(0)
+		endif
+	elseif choiceButton == 4
+		choiceButton = DurielClasses15NightBlade.Show()
+		if choiceButton == 0
+			self.NightBlade(0)
+		elseif choiceButton == 1
+			self.PhysMag(0)
+		endif
+	elseif choiceButton == 5
+		choiceButton = DurielClasses16Monk.Show()
+		if choiceButton == 0
+			self.Monk(0)
+		elseif choiceButton == 1
+			self.PhysMag(0)
+		endif
+	elseif choiceButton == 6
+		choiceButton = DurielClasses17Pilgrim.Show()
+		if choiceButton == 0
+			self.Pilgrim(0)
+		elseif choiceButton == 1
+			self.PhysMag(0)
+		endif
+	elseif choiceButton == 7
+		self.ClassMenu(0)
+	endif
+
+endFunction
+
+function MagPhys (Int choiceButton)
+
+	choiceButton = DurielClassesChoiceMessage03.Show()
+	if choiceButton == 0
+		choiceButton = DurielClasses18NatureArcher.Show()
+		if choiceButton == 0
+			self.NatureArcher(0)
+		elseif choiceButton == 1
+			self.MagPhys(0)
+		endif
+	elseif choiceButton == 1
+		choiceButton = DurielClasses19Priest.Show()
+		if choiceButton == 0
+			self.Priest(0)
+		elseif choiceButton == 1
+			self.MagPhys(0)
+		endif
+	elseif choiceButton == 2
+		choiceButton = DurielClasses20Warlock.Show()
+		if choiceButton == 0
+			self.Warlock(0)
+		elseif choiceButton == 1
+			self.MagPhys(0)
+		endif
+	elseif choiceButton == 3
+		choiceButton = DurielClasses21Mageknight.Show()
+		if choiceButton == 0
+			self.Mageknight(0)
+		elseif choiceButton == 1
+			self.MagPhys(0)
+		endif
+	elseif choiceButton == 4
+		choiceButton = DurielClasses22Battlemage.Show()
+		if choiceButton == 0
+			self.Battlemage(0)
+		elseif choiceButton == 1
+			self.MagPhys(0)
+		endif
+	elseif choiceButton == 5
+		choiceButton = DurielClasses23Guardian.Show()
+		if choiceButton == 0
+			self.Guardian(0)
+		elseif choiceButton == 1
+			self.MagPhys(0)
+		endif
+	elseif choiceButton == 6
+		choiceButton = DurielClasses24Witchhunter.Show()
+		if choiceButton == 0
+			self.Witchhunter(0)
+		elseif choiceButton == 1
+			self.MagPhys(0)
+		endif
+	elseif choiceButton == 7
+		self.ClassMenu(0)
+	endif
+
+endFunction
+
+function Magic (Int choiceButton)
+
+	choiceButton = DurielClassesChoiceMessage04.Show()
+	if choiceButton == 0
+		choiceButton = DurielClasses25Mage.Show()
+		if choiceButton == 0
+			self.Mage(0)
+		elseif choiceButton == 1
+			self.Magic(0)
+		endif
+	elseif choiceButton == 1
+		choiceButton = DurielClasses26Sage.Show()
+		if choiceButton == 0
+			self.Sage(0)
+		elseif choiceButton == 1
+			self.Magic(0)
+		endif
+	elseif choiceButton == 2
+		choiceButton = DurielClasses27Druid.Show()
+		if choiceButton == 0
+			self.Druid(0)
+		elseif choiceButton == 1
+			self.Magic(0)
+		endif
+	elseif choiceButton == 3
+		choiceButton = DurielClasses28Necromancer.Show()
+		if choiceButton == 0
+			self.Necromancer(0)
+		elseif choiceButton == 1
+			self.Magic(0)
+		endif
+	elseif choiceButton == 4
+		choiceButton = DurielClasses29Divinity.Show()
+		if choiceButton == 0
+			self.Divinity(0)
+		elseif choiceButton == 1
+			self.Magic(0)
+		endif
+	elseif choiceButton == 5
+		self.ClassMenu(0)
+	endif
+
+endFunction
+
+; Functions for classes ------------------------------------------------------------------
+function Enforcer (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("twohanded", 20)
+	game.Getplayer().modav("heavyarmor", 20)
+	game.Getplayer().modav("marksman", 20)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 20)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 40)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("pickpocket", -10)
+	game.Getplayer().modav("sneak", -10)
+	game.Getplayer().modav("block", -10)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("speedmult", -20)			; Slow Walk
+	game.Getplayer().setav("reflectdamage", 50)			; Thorn Shell
+	game.Getplayer().modav("twohandedpowermod", 50)		; Heavy Weaponry Training
+	game.Getplayer().modav("damageresist", 200)			; Steel Skin
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(SteelBoots, 1, true)
+	game.Getplayer().additem(SteelCuirass, 1, true)
+	game.Getplayer().additem(SteelGauntlets, 1, true)
+	game.Getplayer().additem(SteelHelmet, 1, true)
+
+	ibutton = DurielClasses01EnforcerConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Ranger (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("marksman", 20)
+	game.Getplayer().modav("lightarmor", 15)
+	game.Getplayer().modav("onehanded", 15)
+	game.Getplayer().modav("block", 10)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 30)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 30)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("destruction", -10)
+	game.Getplayer().modav("twohanded", -10)
+	game.Getplayer().modav("heavyarmor", -10)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("speedmult", 20)				; Fast Walk
+	game.Getplayer().setav("blockpowermod", 20)			; Solid Guard
+	game.Getplayer().modav("attackdamagemult", 1.20)	; Natural Force
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(LeatherBoots, 1, true)
+	game.Getplayer().additem(LeatherCuirass, 1, true)
+	game.Getplayer().additem(LeatherGauntlets, 1, true)
+	game.Getplayer().additem(HideShield, 1, true)
+
+	ibutton = DurielClasses02RangerConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Knight (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("twohanded", 15)
+	game.Getplayer().modav("onehanded", 15)
+	game.Getplayer().modav("lightarmor", 10)
+	game.Getplayer().modav("heavyarmor", 10)
+	game.Getplayer().modav("block", 10)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 20)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 40)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("destruction", -5)
+	game.Getplayer().modav("illusion", -5)
+	game.Getplayer().modav("alteration", -5)
+	game.Getplayer().modav("conjuration", -5)
+	game.Getplayer().modav("restoration", -5)
+	game.Getplayer().modav("pickpocket", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().setav("blockpowermod", 50)			; Aegis
+	game.Getplayer().modav("weaponspeedmult", 0.3)		; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.3)	; Reflexes
+	game.Getplayer().modav("twohandedpowermod", 30)		;
+	game.Getplayer().modav("onehandedpowermod", 30)		; Justice Strength
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(IronBoots, 1, true)
+	game.Getplayer().additem(IronCuirass, 1, true)
+	game.Getplayer().additem(IronGauntlets, 1, true)
+	game.Getplayer().additem(IronShield, 1, true)
+	game.Getplayer().additem(wIronSword, 1, true)
+
+	ibutton = DurielClasses03KnightConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Berserker (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("twohanded", 20)
+	game.Getplayer().modav("onehanded", 20)
+	game.Getplayer().modav("lightarmor", 20)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 40)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 20)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("destruction", -5)
+	game.Getplayer().modav("illusion", -5)
+	game.Getplayer().modav("conjuration", -5)
+	game.Getplayer().modav("restoration", -5)
+	game.Getplayer().modav("block", -5)
+	game.Getplayer().modav("marksman", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("attackdamagemult", 1.50)						; Brute Force
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 100); Vitality
+	game.Getplayer().modav("critchance", 20)								; Brutal Aim
+	game.Getplayer().modav("twohandedpowermod", 25)							; Muscular Balance
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(ScaledBoots, 1, true)
+	game.Getplayer().additem(ScaledCuirass, 1, true)
+	game.Getplayer().additem(ScaledGauntlets, 1, true)
+	game.Getplayer().additem(ScaledHelmet, 1, true)
+
+	ibutton = DurielClasses04BerserkerConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+	
+endFunction
+
+function Samurai (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("twohanded", 20)
+	game.Getplayer().modav("heavyarmor", 15)
+	game.Getplayer().modav("onehanded", 10)
+	game.Getplayer().modav("block", 10)
+	game.Getplayer().modav("lightarmor", 5)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 30)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 30)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("destruction", -5)
+	game.Getplayer().modav("illusion", -5)
+	game.Getplayer().modav("conjuration", -5)
+	game.Getplayer().modav("restoration", -5)
+	game.Getplayer().modav("pickpocket", -5)
+	game.Getplayer().modav("sneak", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().setav("reflectdamage", 25)			; Spiky Shell
+	game.Getplayer().modav("attackdamagemult", 1.20)	; Natural Force
+	game.Getplayer().modav("damageresist", 100)			; Iron Skin
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(BladesBoots, 1, true)
+	game.Getplayer().additem(BladesCuirass, 1, true)
+	game.Getplayer().additem(BladesGauntlets, 1, true)
+	game.Getplayer().additem(BladesHelmet, 1, true)
+	game.Getplayer().additem(Katana, 1, true)
+
+	ibutton = DurielClasses05SamuraiConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Swordmaster (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("onehanded", 20)
+	game.Getplayer().modav("marksman", 20)
+	game.Getplayer().modav("lightarmor", 20)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 40)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 20)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("destruction", -10)
+	game.Getplayer().modav("conjuration", -10)
+	game.Getplayer().modav("illusion", -5)
+	game.Getplayer().modav("restoration", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("speedmult", 20)				; Fast Walk
+	game.Getplayer().modav("weaponspeedmult", 0.5)		; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.5)	; Lethal Reflexes
+	game.Getplayer().modav("critchance", 25)			; Deadly Aim
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(HideBoots, 1, true)
+	game.Getplayer().additem(HideCuirass, 1, true)
+	game.Getplayer().additem(HideGauntlets, 1, true)
+	game.Getplayer().additem(wIronSword, 1, true)
+
+	ibutton = DurielClasses06SwordmasterConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Sniper (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("marksman", 25)
+	game.Getplayer().modav("lightarmor", 20)
+	game.Getplayer().modav("sneak", 15)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 30)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 30)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("destruction", -5)
+	game.Getplayer().modav("conjuration", -5)
+	game.Getplayer().modav("illusion", -5)
+	game.Getplayer().modav("restoration", -5)
+	game.Getplayer().modav("alteration", -5)
+	game.Getplayer().modav("twohanded", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("speedmult", 20)				; Fast Walk
+	game.Getplayer().modav("critchance", 15)			; Precise Aim
+	game.Getplayer().modav("marksmanpowermod", 50)		; Bow Expertise
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(LeatherBoots, 1, true)
+	game.Getplayer().additem(LeatherCuirass, 1, true)
+	game.Getplayer().additem(LeatherGauntlets, 1, true)
+	game.Getplayer().additem(LeatherHelmet, 1, true)
+	game.Getplayer().additem(wLongBow, 1, true)
+	game.Getplayer().additem(aIronArrow, 10, true)
+
+	ibutton = DurielClasses07SniperConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Thief (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("lockpicking", 15)
+	game.Getplayer().modav("pickpocket", 15)
+	game.Getplayer().modav("onehanded", 10)
+	game.Getplayer().modav("lightarmor", 10)
+	game.Getplayer().modav("sneak", 10)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 10)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 50)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("twohanded", -10)
+	game.Getplayer().modav("heavyarmor", -10)
+	game.Getplayer().modav("destruction", -5)
+	game.Getplayer().modav("conjuration", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("speedmult", 20)				; Fast Walk
+	game.Getplayer().modav("critchance", 5)				; Luck
+	game.Getplayer().modav("weaponspeedmult", 0.3)		; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.3)	; Reflexes
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(LeatherBoots, 1, true)
+	game.Getplayer().additem(LeatherCuirass, 1, true)
+	game.Getplayer().additem(LeatherGauntlets, 1, true)
+	game.Getplayer().additem(LeatherHelmet, 1, true)
+	game.Getplayer().additem(wIronDagger, 1, true)
+
+	ibutton = DurielClasses08ThiefConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Assassin (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("sneak", 15)
+	game.Getplayer().modav("lockpicking", 10)
+	game.Getplayer().modav("onehanded", 10)
+	game.Getplayer().modav("lightarmor", 10)
+	game.Getplayer().modav("marksman", 10)
+	game.Getplayer().modav("pickpocket", 5)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 20)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 40)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("twohanded", -10)
+	game.Getplayer().modav("heavyarmor", -10)
+	game.Getplayer().modav("destruction", -5)
+	game.Getplayer().modav("conjuration", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("speedmult", 20)										; Fast Walk
+	game.Getplayer().modav("critchance", 15)									; Precise Aim
+	game.Getplayer().modav("weaponspeedmult", 0.5)								; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.5)							; Lethal Reflexes
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 100)	; Endurance
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(LeatherBoots, 1, true)
+	game.Getplayer().additem(LeatherCuirass, 1, true)
+	game.Getplayer().additem(LeatherGauntlets, 1, true)
+	game.Getplayer().additem(LeatherHelmet, 1, true)
+	game.Getplayer().additem(wIronDagger, 1, true)
+
+	ibutton = DurielClasses09AssassinConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Ronin (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("onehanded", 20)
+	game.Getplayer().modav("lightarmor", 15)
+	game.Getplayer().modav("twohanded", 10)
+	game.Getplayer().modav("block", 10)
+	game.Getplayer().modav("heavyarmor", 5)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 30)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 30)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("destruction", -5)
+	game.Getplayer().modav("conjuration", -5)
+	game.Getplayer().modav("illusion", -5)
+	game.Getplayer().modav("restoration", -5)
+	game.Getplayer().modav("sneak", -5)
+	game.Getplayer().modav("pickpocket", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("speedmult", 20)				; Fast Walk
+	game.Getplayer().modav("critchance", 10)			; Greater Luck
+	game.Getplayer().modav("weaponspeedmult", 0.3)		; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.3)	; Reflexes
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(MonkRobesRed, 1, true)
+	game.Getplayer().additem(ChefShoes, 1, true)
+	game.Getplayer().additem(Katana, 2, true)
+
+	ibutton = DurielClasses10RoninConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Templar (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("twohanded", 20)
+	game.Getplayer().modav("heavyarmor", 15)
+	game.Getplayer().modav("restoration", 15)
+	game.Getplayer().modav("destruction", 10)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 30)
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 30)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("pickpocket", -10)
+	game.Getplayer().modav("sneak", -5)
+	game.Getplayer().modav("lockpicking", -5)
+	game.Getplayer().modav("conjuration", -5)
+	game.Getplayer().modav("illusion", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("reflectdamage", 25)			; 
+	game.Getplayer().modav("absorbchance", 50)			; Divine Caparison
+	game.Getplayer().setav("destructionpowermod", 50)	; Divine Power
+	game.Getplayer().modav("twohandedpowermod", 50)		;
+	game.Getplayer().setav("restorationpowermod", 50)	; Heaven's Arm
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(SteelPlateBoots, 1, true)
+	game.Getplayer().additem(SteelPlateCuirass, 1, true)
+	game.Getplayer().additem(SteelPlateGauntlets, 1, true)
+	game.Getplayer().additem(SteelPlateHelmet, 1, true)
+	game.Getplayer().additem(TomeHealingHands, 1, true)
+
+	ibutton = DurielClasses11TemplarConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Paladin (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("onehanded", 20)
+	game.Getplayer().modav("block", 15)
+	game.Getplayer().modav("restoration", 15)
+	game.Getplayer().modav("heavyarmor", 10)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 30)
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 30)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("pickpocket", -10)
+	game.Getplayer().modav("sneak", -5)
+	game.Getplayer().modav("lockpicking", -5)
+	game.Getplayer().modav("conjuration", -5)
+	game.Getplayer().modav("illusion", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("blockpowermod", 100)		; 
+	game.Getplayer().modav("absorbchance", 50)			; Divine Bulwark
+	game.Getplayer().modav("magicresist", 20)			; Divine Conduction
+	game.Getplayer().modav("onehandedpowermod", 50)		;
+	game.Getplayer().setav("restorationpowermod", 50)	; Heaven's Hand
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(SteelBoots, 1, true)
+	game.Getplayer().additem(SteelCuirass, 1, true)
+	game.Getplayer().additem(SteelGauntlets, 1, true)
+	game.Getplayer().additem(SteelHelmet, 1, true)
+	game.Getplayer().additem(SteelShield, 1, true)
+	game.Getplayer().additem(TomeHealingHands, 1, true)
+
+	ibutton = DurielClasses12PaladinConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function DreadKnight (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("onehanded", 10)
+	game.Getplayer().modav("block", 10)
+	game.Getplayer().modav("lightarmor", 10)
+	game.Getplayer().modav("heavyarmor", 10)
+	game.Getplayer().modav("conjuration", 10)
+	game.Getplayer().modav("illusion", 10)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 20)
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 40)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("restoration", -10)
+	game.Getplayer().modav("sneak", -10)
+	game.Getplayer().modav("pickpocket", -5)
+	game.Getplayer().modav("lockpicking", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("onehandedpowermod", 50)		;
+	game.Getplayer().setav("illusionpowermod", 50)		; Shadow's Hand
+	game.Getplayer().setav("blockpowermod", 30)			; 
+	game.Getplayer().modav("magicresist", 20)			; Dark Barrier
+	game.Getplayer().setav("conjurationpowermod", 50)	; Summoning Authority
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(EbonyShield, 1, true)
+	game.Getplayer().additem(wEbonySword, 1, true)
+
+	ibutton = DurielClasses13DreadKnightConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Duelist (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("onehanded", 20)
+	game.Getplayer().modav("alteration", 20)
+	game.Getplayer().modav("illusion", 20)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 30)
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 30)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("twohanded", -5)
+	game.Getplayer().modav("block", -5)
+	game.Getplayer().modav("marksman", -5)
+	game.Getplayer().modav("heavyarmor", -5)
+	game.Getplayer().modav("pickpocket", -5)
+	game.Getplayer().modav("lockpicking", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("speedmult", 20)										; Fast Walk
+	game.Getplayer().modav("weaponspeedmult", 0.3)								; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.3)							; Reflexes
+	game.Getplayer().setav("alterationpowermod", 50)							; Body Enhancement
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 50)		; 
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 50)	; Resilience
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(LeatherBoots, 1, true)
+	game.Getplayer().additem(LeatherCuirass, 1, true)
+	game.Getplayer().additem(LeatherGauntlets, 1, true)
+	game.Getplayer().additem(wIronSword, 1, true)
+
+	ibutton = DurielClasses14DuelistConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function NightBlade (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("onehanded", 15)
+	game.Getplayer().modav("sneak", 15)
+	game.Getplayer().modav("lightarmor", 10)
+	game.Getplayer().modav("illusion", 10)
+	game.Getplayer().modav("conjuration", 10)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 10)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 20)
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 30)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("twohanded", -10)
+	game.Getplayer().modav("marksman", -10)
+	game.Getplayer().modav("heavyarmor", -10)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("speedmult", 20)										; Fast Walk
+	game.Getplayer().modav("weaponspeedmult", 0.3)								; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.3)							; Reflexes
+	game.Getplayer().setav("conjurationpowermod", 50)							; 
+	game.Getplayer().setav("illusionpowermod", 50)								; Spiritual Link
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 50)	;
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 50)	; Hybrid Energy
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(LeatherBoots, 1, true)
+	game.Getplayer().additem(LeatherCuirass, 1, true)
+	game.Getplayer().additem(LeatherGauntlets, 1, true)
+	game.Getplayer().additem(LeatherHelmet, 1, true)
+	game.Getplayer().additem(wIronDagger, 1, true)
+	game.Getplayer().additem(TomeBoundSword, 1, true)
+
+
+	ibutton = DurielClasses15NightBladeConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Monk (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("unarmeddamage", 20)			; Monk and Pilgrim ability
+	game.Getplayer().modav("restoration", 20)
+	game.Getplayer().modav("alteration", 20)
+	game.Getplayer().modav("lightarmor", 10)
+	game.Getplayer().modav("heavyarmor", 10)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 20)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 20)
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 20)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("twohanded", -5)
+	game.Getplayer().modav("block", -5)
+	game.Getplayer().modav("sneak", -5)
+	game.Getplayer().modav("lockpicking", -5)
+	game.Getplayer().modav("pickpocket", -5)
+	game.Getplayer().modav("illusion", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("attackdamagemult", 1.50)							; Brute Force
+	game.Getplayer().setav("alterationpowermod", 50)							; Body Enhancement
+	game.Getplayer().setav("restorationpowermod", 50)							; Healing Will
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 50)	; 
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 50)		; Spiritual Core
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(MonkBoots, 1, true)
+	game.Getplayer().additem(MonkRobes, 1, true)
+
+	ibutton = DurielClasses16MonkConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Pilgrim (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("unarmeddamage", 20)			; Monk and Pilgrim ability
+	game.Getplayer().modav("conjuration", 20)
+	game.Getplayer().modav("alteration", 20)
+	game.Getplayer().modav("lightarmor", 10)
+	game.Getplayer().modav("heavyarmor", 10)
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 20)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 20)
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 20)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("onehanded", -5)
+	game.Getplayer().modav("block", -5)
+	game.Getplayer().modav("sneak", -5)
+	game.Getplayer().modav("lockpicking", -5)
+	game.Getplayer().modav("pickpocket", -5)
+	game.Getplayer().modav("illusion", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("attackdamagemult", 1.50)							; Brute Force
+	game.Getplayer().setav("alterationpowermod", 50)							; Body Enhancement
+	game.Getplayer().setav("conjurationpowermod", 50)							; Summoning Authority
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 50)	; 
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 50)		; Spiritual Core
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(MonkBoots, 1, true)
+	game.Getplayer().additem(MonkRobes, 1, true)
+
+	ibutton = DurielClasses17PilgrimConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function NatureArcher (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().modav("marksman", 20)
+	game.Getplayer().modav("conjuration", 15)
+	game.Getplayer().modav("alteration", 15)
+	game.Getplayer().modav("restoration", 10)
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 30)
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 30)
+	; Class penalties are as follows -----------------------------------------------------
+	game.Getplayer().modav("destruction", -10)
+	game.Getplayer().modav("heavyarmor", -10)
+	game.Getplayer().modav("onehanded", -5)
+	game.Getplayer().modav("twohanded", -5)
+	; Class skills are the following -----------------------------------------------------
+	game.Getplayer().modav("critchance", 5)										; Luck
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 50)	;
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 50)	; Hybrid Energy
+	game.Getplayer().modav("marksmanpowermod", 50)								; Bow Expertise
+	game.Getplayer().setav("conjurationpowermod", 50)							; Summoning Authority
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(HideBoots, 1, true)
+	game.Getplayer().additem(HideCuirass, 1, true)
+	game.Getplayer().additem(HideGauntlets, 1, true)
+	game.Getplayer().additem(TomeBoundBow, 1, true)
+
+	ibutton = DurielClasses18NatureArcherConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Priest (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+
+	ibutton = DurielClasses19PriestConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Warlock (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+
+	ibutton = DurielClasses20WarlockConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Mageknight (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+
+	ibutton = DurielClasses21MageknightConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Battlemage (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+
+	ibutton = DurielClasses22BattlemageConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Guardian (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+
+	ibutton = DurielClasses23GuardianConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Witchhunter (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(CrossBow, 1, true)
+	game.Getplayer().additem(Bolt, 10, true)
+
+	ibutton = DurielClasses24WitchhunterConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Mage (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+
+	ibutton = DurielClasses25MageConfirmed.Show()
+	if ibutton == 0
+		ibutton = DurielClassesChoiceMessage04Mage.Show()
+		if ibutton == 0
+			game.Getplayer().additem(TomeFlames, 1, true)
+			self.JobMenu(0)
+		elseif ibutton == 1
+			game.Getplayer().additem(TomeFrostbite, 1, true)
+			self.JobMenu(0)
+		elseif ibutton == 2
+			game.Getplayer().additem(TomeSparks, 1, true)
+			self.JobMenu(0)
+		endif
+	endif
+
+endFunction
+
+function Sage (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+
+	ibutton = DurielClasses26SageConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Druid (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+
+	ibutton = DurielClasses27DruidConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Necromancer (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	; Class starting items are the following ---------------------------------------------
+	game.Getplayer().additem(TomeZombie, 1, true)
+
+	ibutton = DurielClasses28NecromancerConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+function Divinity (Int ibutton)
+
+	; Class bonus are as follows ---------------------------------------------------------
+	game.Getplayer().setav("health", 200)
+	game.Getplayer().setav("stamina", 200)
+	game.Getplayer().setav("magicka", 200)
+	game.Getplayer().modav("carryweight", 200)
+	game.Getplayer().modav("unarmeddamage", 50)
+	game.Getplayer().setav("healratemult", 50)
+	game.Getplayer().setav("staminaratemult", 50)
+	game.Getplayer().setav("magickaratemult", 50)
+	game.Getplayer().setav("illusion", 20)
+	game.Getplayer().setav("conjuration", 20)
+	game.Getplayer().setav("destruction", 20)
+	game.Getplayer().setav("restoration", 20)
+	game.Getplayer().setav("alteration", 20)
+	game.Getplayer().setav("enchanting", 20)
+	game.Getplayer().setav("smithing", 20)
+	game.Getplayer().setav("heavyarmor", 20)
+	game.Getplayer().setav("block", 20)
+	game.Getplayer().setav("lightarmor", 20)
+	game.Getplayer().setav("twohanded", 20)
+	game.Getplayer().setav("onehanded", 20)
+	game.Getplayer().setav("marksman", 20)
+	game.Getplayer().setav("sneak", 20)
+	game.Getplayer().setav("lockpicking", 20)
+	game.Getplayer().setav("pickpocket", 20)
+	game.Getplayer().setav("speechcraft", 20)
+	game.Getplayer().setav("alchemy", 20)
+	game.Getplayer().modav("destructionmod", 50)
+	game.Getplayer().modav("restorationmod", 50)
+	game.Getplayer().modav("alterationmod", 50)
+	game.Getplayer().modav("conjurationmod", 50)
+	game.Getplayer().modav("illusionmod", 50)
+	game.Getplayer().modav("destructionpowermod", 100)
+	game.Getplayer().modav("restorationpowermod", 100)
+	game.Getplayer().modav("alterationpowermod", 100)
+	game.Getplayer().modav("conjurationpowermod", 100)
+	game.Getplayer().modav("illusionpowermod", 100)
+	game.Getplayer().modav("onehandedpowermod", 100)
+	game.Getplayer().modav("twohandedpowermod", 100)
+	game.Getplayer().modav("marksmanpowermod", 100)
+
+	ibutton = DurielClasses29DivinityConfirmed.Show()
+	if ibutton == 0
+		self.JobMenu(0)
+	endif
+
+endFunction
+
+; Here are the job functions -------------------------------------------------------------
+function JobMenu (Int choiceButton)
+		
+	choiceButton = DurielClassesJobMessage.Show()
+	if choiceButton == 0
+		if jobSmith == 1
+			choiceButton = DurielClassesJobDelete.Show()
+			if choiceButton == 0
+				jobChoiceNumber -= 1
+				jobSmith = 0
+				self.JobMenu(0)
+			else
+				self.JobMenu(0)
+			endif
+		else
+			choiceButton = DurielClasses001JobBlacksmith.Show()
+			if choiceButton == 0
+				if jobChoiceNumber == 3
+					choiceButton = DurielClassesJobMessageFull.Show()
+					if choiceButton == 0
+						self.jobCalculation()
+					else
+						self.JobMenu(0)
+					endif
+				else
+					jobSmith = 1
+					jobChoiceNumber += 1
+					choiceButton = DurielClasses001JobBlacksmithConfirmed.Show()
+					if choiceButton == 0
+						self.JobMenu(0)
+					endif
+				endif
+			else
+				self.JobMenu(0)
+			endif
+		endif
+	endif
+	if choiceButton == 1
+		if jobEnchanter == 1
+			choiceButton = DurielClassesJobDelete.Show()
+			if choiceButton == 0
+				jobChoiceNumber -= 1
+				jobEnchanter = 0
+				self.JobMenu(0)
+			else
+				self.JobMenu(0)
+			endif
+		else
+			choiceButton = DurielClasses002JobEnchanter.Show()
+			if choiceButton == 0
+				if jobChoiceNumber == 3
+					choiceButton = DurielClassesJobMessageFull.Show()
+					if choiceButton == 0
+						self.jobCalculation()
+					else
+						self.JobMenu(0)
+					endif
+				else
+					jobEnchanter = 1
+					jobChoiceNumber += 1
+					choiceButton = DurielClasses002JobEnchanterConfirmed.Show()
+					if choiceButton == 0
+						self.JobMenu(0)
+					endif
+				endif
+			else
+				self.JobMenu(0)
+			endif
+		endif
+	endif
+	if choiceButton == 2
+		if jobAlchemist == 1
+			choiceButton = DurielClassesJobDelete.Show()
+			if choiceButton == 0
+				jobChoiceNumber -= 1
+				jobAlchemist = 0
+				self.JobMenu(0)
+			else
+				self.JobMenu(0)
+			endif
+		else
+			choiceButton = DurielClasses003JobAlchemist.Show()
+			if choiceButton == 0
+				if jobChoiceNumber == 3
+					choiceButton = DurielClassesJobMessageFull.Show()
+					if choiceButton == 0
+						self.jobCalculation()
+					else
+						self.JobMenu(0)
+					endif
+				else
+					jobAlchemist = 1
+					jobChoiceNumber += 1
+					choiceButton = DurielClasses003JobAlchemistConfirmed.Show()
+					if choiceButton == 0
+						self.JobMenu(0)
+					endif
+				endif
+			else
+				self.JobMenu(0)
+			endif
+		endif
+	endif
+	if choiceButton == 3
+		if jobAdventurer == 1
+			choiceButton = DurielClassesJobDelete.Show()
+			if choiceButton == 0
+				jobChoiceNumber -= 1
+				jobAdventurer = 0
+				self.JobMenu(0)
+			else
+				self.JobMenu(0)
+			endif
+		else
+			choiceButton = DurielClasses004JobAdventurer.Show()
+			if choiceButton == 0
+				if jobChoiceNumber == 3
+					choiceButton = DurielClassesJobMessageFull.Show()
+					if choiceButton == 0
+						self.jobCalculation()
+					else
+						self.JobMenu(0)
+					endif
+				else
+					jobAdventurer = 1
+					jobChoiceNumber += 1
+					choiceButton = DurielClasses004JobAdventurerConfirmed.Show()
+					if choiceButton == 0
+						self.JobMenu(0)
+					endif
+				endif
+			else
+				self.JobMenu(0)
+			endif
+		endif
+	endif
+	if choiceButton == 4
+		if jobMercenary == 1
+			choiceButton = DurielClassesJobDelete.Show()
+			if choiceButton == 0
+				jobChoiceNumber -= 1
+				jobMercenary = 0
+				self.JobMenu(0)
+			else
+				self.JobMenu(0)
+			endif
+		else
+			choiceButton = DurielClasses005JobMercenary.Show()
+			if choiceButton == 0
+				if jobChoiceNumber == 3
+					choiceButton = DurielClassesJobMessageFull.Show()
+					if choiceButton == 0
+						self.jobCalculation()
+					else
+						self.JobMenu(0)
+					endif
+				else
+					jobMercenary = 1
+					jobChoiceNumber += 1
+					choiceButton = DurielClasses005JobMercenaryConfirmed.Show()
+					if choiceButton == 0
+						self.JobMenu(0)
+					endif
+				endif
+			else
+				self.JobMenu(0)
+			endif
+		endif
+	endif
+	if choiceButton == 5
+		if jobBard == 1
+			choiceButton = DurielClassesJobDelete.Show()
+			if choiceButton == 0
+				jobChoiceNumber -= 1
+				jobBard = 0
+				self.JobMenu(0)
+			else
+				self.JobMenu(0)
+			endif
+		else
+			choiceButton = DurielClasses006JobBard.Show()
+			if choiceButton == 0
+				if jobChoiceNumber == 3
+					choiceButton = DurielClassesJobMessageFull.Show()
+					if choiceButton == 0
+						self.jobCalculation()
+					else
+						self.JobMenu(0)
+					endif
+				else
+					jobBard = 1
+					jobChoiceNumber += 1
+					choiceButton = DurielClasses006JobBardConfirmed.Show()
+					if choiceButton == 0
+						self.JobMenu(0)
+					endif
+				endif
+			else
+				self.JobMenu(0)
+			endif
+		endif
+	endif
+	if choiceButton == 6
+		if jobMerchant == 1
+			choiceButton = DurielClassesJobDelete.Show()
+			if choiceButton == 0
+				jobChoiceNumber -= 1
+				jobMerchant = 0
+				self.JobMenu(0)
+			else
+				self.JobMenu(0)
+			endif
+		else
+			choiceButton = DurielClasses007JobMerchant.Show()
+			if choiceButton == 0
+				if jobChoiceNumber == 3
+					choiceButton = DurielClassesJobMessageFull.Show()
+					if choiceButton == 0
+						self.jobCalculation()
+					else
+						self.JobMenu(0)
+					endif
+				else
+					jobMerchant = 1
+					jobChoiceNumber += 1
+					choiceButton = DurielClasses007JobMerchantConfirmed.Show()
+					if choiceButton == 0
+						self.JobMenu(0)
+					endif
+				endif
+			else
+				self.JobMenu(0)
+			endif
+		endif
+	endif
+	if choiceButton == 7
+		if jobHunter == 1
+			choiceButton = DurielClassesJobDelete.Show()
+			if choiceButton == 0
+				jobChoiceNumber -= 1
+				jobHunter = 0
+				self.JobMenu(0)
+			else
+				self.JobMenu(0)
+			endif
+		else
+			choiceButton = DurielClasses008JobHunter.Show()
+			if choiceButton == 0
+				if jobChoiceNumber == 3
+					choiceButton = DurielClassesJobMessageFull.Show()
+					if choiceButton == 0
+						self.jobCalculation()
+					else
+						self.JobMenu(0)
+					endif
+				else
+					jobHunter = 1
+					jobChoiceNumber += 1
+					choiceButton = DurielClasses008JobHunterConfirmed.Show()
+					if choiceButton == 0
+						self.JobMenu(0)
+					endif
+				endif
+			else
+				self.JobMenu(0)
+			endif
+		endif
+	endif
+	if choiceButton == 8
+		if jobChoiceNumber == 0
+			choiceButton = DurielClassesJobMessageEmpty.Show()
+			if choiceButton == 0
+				self.WealthMenu(0)
+			else
+				self.JobMenu(0)
+			endif
+		elseif jobChoiceNumber != 0
+			self.jobCalculation()
+		endif
+	endif
+
+endFunction
+
+; Here is the function for calculation of the jobs ---------------------------------------
+function jobCalculation ()
+
+	if jobSmith == 1
+		; Blacksmith bonus ---------------------------------------------------------------
+		game.Getplayer().setav("smithingpowermod", 50)
+		game.Getplayer().additem(IronIngot, 5, true)
+		game.Getplayer().additem(IronOre, 10, true)
+		game.Getplayer().additem(CorundumIngot, 3, true)
+		game.Getplayer().additem(SteelIngot, 3, true)
+		game.Getplayer().additem(Leather, 5, true)
+	endif
+	if jobEnchanter == 1
+		; Enchanter bonus ----------------------------------------------------------------
+		game.Getplayer().setav("enchantingpowermod", 50)
+		game.Getplayer().additem(GemPetty, 3, true)
+		game.Getplayer().additem(GemPettyFilled, 3, true)
+		game.Getplayer().additem(GemLesser, 3, true)
+		game.Getplayer().additem(GemLesserFilled, 3, true)
+		game.Getplayer().additem(GemGreater, 2, true)
+		game.Getplayer().additem(GemGreaterFilled, 2, true)
+		game.Getplayer().additem(GemGrand, 1, true)
+		game.Getplayer().additem(GemGrandFilled, 1, true)
+	endif
+	if jobAlchemist == 1
+		; Alchemist bonus ----------------------------------------------------------------
+		game.Getplayer().setav("alchemypowermod", 50)
+		game.Getplayer().additem(MountainFlowerBlue, 6, true)
+		game.Getplayer().additem(MountainFlowerPurple, 6, true)
+		game.Getplayer().additem(MountainFlowerRed, 6, true)
+		game.Getplayer().additem(Mush01, 3, true)
+		game.Getplayer().additem(Mush02, 3, true)
+		game.Getplayer().additem(Mush03, 3, true)
+		game.Getplayer().additem(Mush04, 3, true)
+		game.Getplayer().additem(Mush06, 3, true)
+		game.Getplayer().additem(ingJazBay, 3, true)
+		game.Getplayer().additem(ingJuniperBerries, 3, true)
+		game.Getplayer().additem(ingNirnroot, 3, true)
+		game.Getplayer().additem(fishScales, 3, true)
+		game.Getplayer().additem(Cotton, 3, true)
+		game.Getplayer().additem(ingFireflyThorax, 3, true)
+		game.Getplayer().additem(Sap, 1, true)
+		game.Getplayer().additem(ingTaproot, 1, true)
+	endif
+	if jobAdventurer == 1
+		; Adventurer bonus ---------------------------------------------------------------
+		game.Getplayer().modav("twohanded", 5)
+		game.Getplayer().modav("onehanded", 5)
+		game.Getplayer().modav("block", 5)
+		game.Getplayer().modav("sneak", 5)
+		game.Getplayer().modav("lockpicking", 5)
+		game.Getplayer().modav("marksman", 5)
+		game.Getplayer().modav("lightarmor", 5)
+		game.Getplayer().modav("heavyarmor", 5)
+	endif
+	if jobMercenary == 1
+		; Mercenary bonus ----------------------------------------------------------------
+		game.Getplayer().modav("lightarmor", 10)
+		game.Getplayer().modav("heavyarmor", 10)
+		game.Getplayer().modav("speechcraft", 10)
+		game.Getplayer().modav("speechcraftpowermod", 20)
+		game.Getplayer().additem(Gold001, 500)
+	endif
+	if jobBard == 1
+		; Bard bonus ---------------------------------------------------------------------
+		game.Getplayer().modav("speechcraft", 10)
+		game.Getplayer().modav("speechcraftpowermod", 30)
+		game.Getplayer().additem(iLute, 1, true)
+		game.Getplayer().additem(Gold001, 100)
+	endif
+	if jobMerchant == 1
+		; Merchant bonus -----------------------------------------------------------------
+		game.Getplayer().modav("speechcraft", 20)
+		game.Getplayer().modav("speechcraftpowermod", 50)
+		game.Getplayer().additem(Gold001, 500)
+	endif
+	if jobHunter == 1
+		; Hunter bonus -------------------------------------------------------------------
+		game.Getplayer().modav("marksmanpowermod", 50)
+		game.Getplayer().additem(wIronDagger, 1, true)
+		game.Getplayer().additem(wHuntingBow, 1, true)
+		game.Getplayer().additem(aSteelArrow, 10, true)
+		game.Getplayer().additem(Tusk, 1, true)
+		game.Getplayer().additem(Antlers, 2, true)
+		game.Getplayer().additem(DeerHide, 2, true)
+		game.Getplayer().additem(Venison, 2, true)
+		game.Getplayer().additem(HorkerMeat, 2, true)
+	endif
+	
+	self.WealthMenu(0)
+
+endFunction
+
+; Here is the wealth function ------------------------------------------------------------
+function WealthMenu (Int choiceButton)
+
+	; Variables function specific for random calculation for wealth level ----------------
+	int result = 0
+	int a = 0
+	int b = 0
+	int c = 0
+	int d = 0
+
+	choiceButton = DurielClassesWealthMessage.Show()
+	if choiceButton == 0
+		choiceButton = DurielClassesWealthConfirmation.Show()
+		; Random calculation between 10 and 50 and added to player character ---------
+		a = Utility.RandomInt(10,50)
+		if choiceButton == 0
+			game.Getplayer().additem(Gold001, a, true)
+		else
+			self.WealthMenu(0)
+		endif
+	elseif choiceButton == 1
+		choiceButton = DurielClassesWealthConfirmation.Show()
+		; Random calculation between 31 and 220 and added to player character --------
+		a = Utility.RandomInt(10,100)
+		b = Utility.RandomInt(1,10)
+		result = a*2 + b + 10
+		; Result cannot be less than 50 and more than 200 ----------------------------
+		if result < 50
+			result = 50
+		endif
+		if result > 200
+			result = 200
+		endif
+		if choiceButton == 0
+			game.Getplayer().additem(Gold001, result, true)
+		else
+			self.WealthMenu(0)
+		endif
+	elseif choiceButton == 2
+		choiceButton = DurielClassesWealthConfirmation.Show()
+		; Random calculation between 181 and 510 and added to player character -------
+		a = Utility.RandomInt(20,100)
+		b = Utility.RandomInt(1,10)
+		result = a*4 + b + 100
+		; Result cannot be less than 200 and more than 500 ---------------------------
+		if result < 200
+			result = 200
+		endif
+		if result > 500
+			result = 500
+		endif
+		if choiceButton == 0
+			game.Getplayer().additem(Gold001, result, true)
+		else
+			self.WealthMenu(0)
+		endif
+	elseif choiceButton == 3
+		choiceButton = DurielClassesWealthConfirmation.Show()
+		; Random calculation between 401 and 2210 and added to player character ------
+		a = Utility.RandomInt(10,100)
+		b = Utility.RandomInt(1,10)
+		result = a*20 + b + 200
+		; Result cannot be less than 500 and more than 2000 --------------------------
+		if result < 500
+			result = 500
+		endif
+		if result > 2000
+			result = 2000
+		endif
+		if choiceButton == 0
+			game.Getplayer().additem(Gold001, result, true)
+		else
+			self.WealthMenu(0)
+		endif
+	elseif choiceButton == 4
+		choiceButton = DurielClassesWealthConfirmation.Show()
+		; Random calculation between 1811 and 5110 and added to player character -----
+		a = Utility.RandomInt(20,100)
+		b = Utility.RandomInt(20,100)
+		c = Utility.RandomInt(10,100)
+		d = Utility.RandomInt(1,10)
+		result = (a + b)*20 + c + d + 1000
+		; Result cannot be less than 2000 and more than 5000 -------------------------
+		if result < 2000
+			result = 2000
+		endif
+		if result > 5000
+			result = 5000
+		endif
+		if choiceButton == 0
+			game.Getplayer().additem(Gold001, result, true)
+		else
+			self.WealthMenu(0)
+		endif
+	elseif choiceButton == 5
+		choiceButton = DurielClassesWealthConfirmation.Show()
+		; Random calculation between 4211 and 11610 and added to player character ----
+		a = Utility.RandomInt(20,100)
+		b = Utility.RandomInt(10,100)
+		c = Utility.RandomInt(10,100)
+		d = Utility.RandomInt(1,10)
+		result = a*80 + b*10 + c + d + 2500
+		; Result cannot be less than 5000 and more than 10000 ------------------------
+		if result < 5000
+			result = 5000
+		endif
+		if result > 10000
+			result = 10000
+		endif
+		if choiceButton == 0
+			game.Getplayer().additem(Gold001, result, true)
+		else
+			self.WealthMenu(0)
+		endif
+	elseif choiceButton == 6
+		choiceButton = DurielClassesWealthConfirmation.Show()
+		; Random calculation more than 9000 and added to player character ------------
+		a = Utility.RandomInt(1,100)
+		b = Utility.RandomInt(1,50)
+		c = Utility.RandomInt(1,99)
+		d = Utility.RandomInt(1,10)
+		; In fact the minimal of minimal result can only be 9000 + 1*1+10+1 = 9012 ---
+		; The maximal of maximal result cannot exceed 15000 due to my calculation ----
+		result = a*b + c*10 + d + 9000
+		; Result cannot be less than 10000 and more than 15000 -----------------------
+		if result < 10000
+			result = 10000
+		endif
+		if choiceButton == 0
+			game.Getplayer().additem(Gold001, result, true)
+		else
+			self.WealthMenu(0)
+		endif
+	endif
+	
+	self.Final()
+
+endFunction
+
+; Here is the final function to finish the class script ----------------------------------
+function Final ()
+
+	DurielClassesFinalMessage.Show()
+	if game.Getplayer().GetItemCount(descBook) >1
+		int a = game.Getplayer().GetItemCount(descBook)
+		game.Getplayer().removeitem(descBook, a - 1, true)
+	endif
+	if game.Getplayer().GetItemCount(descBook) <1
+		game.Getplayer().additem(descBook, 1, true)
+	endif
+
+endFunction
