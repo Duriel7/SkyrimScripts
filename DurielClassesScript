@@ -277,7 +277,7 @@ function OnReading()
 	
 endFunction
 
-; Here is the functions to choose if you want to confirm the race of the character -------
+; Here are the functions to choose if you want to confirm the race of the character -------
 
 function RaceMenu01 (Int choiceButton)
 	
@@ -922,7 +922,7 @@ function Ranger (Int ibutton)
 	; Class skills are the following -----------------------------------------------------
 	game.Getplayer().modav("speedmult", 20)				; Fast Walk
 	game.Getplayer().setav("blockpowermod", 20)			; Solid Guard
-	game.Getplayer().modav("attackdamagemult", 1.20)		; Natural Force
+	game.Getplayer().modav("attackdamagemult", 1.20)	; Natural Force
 	; Class starting items are the following ---------------------------------------------
 	game.Getplayer().additem(LeatherBoots, 1, true)
 	game.Getplayer().additem(LeatherCuirass, 1, true)
@@ -989,10 +989,10 @@ function Berserker (Int ibutton)
 	game.Getplayer().modav("block", -5)
 	game.Getplayer().modav("marksman", -5)
 	; Class skills are the following -----------------------------------------------------
-	game.Getplayer().modav("attackdamagemult", 1.50)	; Brute Force
-	game.Getplayer().setav("health", 100)				; Vitality
-	game.Getplayer().modav("critchance", 20)			; Brutal Aim
-	game.Getplayer().modav("twohandedpowermod", 25)		; Muscular Balance
+	game.Getplayer().modav("attackdamagemult", 1.50)						; Brute Force
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 100); Vitality
+	game.Getplayer().modav("critchance", 20)								; Brutal Aim
+	game.Getplayer().modav("twohandedpowermod", 25)							; Muscular Balance
 	; Class starting items are the following ---------------------------------------------
 	game.Getplayer().additem(ScaledBoots, 1, true)
 	game.Getplayer().additem(ScaledCuirass, 1, true)
@@ -1157,11 +1157,11 @@ function Assassin (Int ibutton)
 	game.Getplayer().modav("destruction", -5)
 	game.Getplayer().modav("conjuration", -5)
 	; Class skills are the following -----------------------------------------------------
-	game.Getplayer().modav("speedmult", 20)				; Fast Walk
-	game.Getplayer().modav("critchance", 15)			; Precise Aim
-	game.Getplayer().modav("weaponspeedmult", 0.5)		; 
-	game.Getplayer().modav("leftweaponspeedmult", 0.5)	; Lethal Reflexes
-	game.Getplayer().setav("stamina", 100)				; Endurance
+	game.Getplayer().modav("speedmult", 20)										; Fast Walk
+	game.Getplayer().modav("critchance", 15)									; Precise Aim
+	game.Getplayer().modav("weaponspeedmult", 0.5)								; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.5)							; Lethal Reflexes
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 100)	; Endurance
 	; Class starting items are the following ---------------------------------------------
 	game.Getplayer().additem(LeatherBoots, 1, true)
 	game.Getplayer().additem(LeatherCuirass, 1, true)
@@ -1330,12 +1330,12 @@ function Duelist (Int ibutton)
 	game.Getplayer().modav("pickpocket", -5)
 	game.Getplayer().modav("lockpicking", -5)
 	; Class skills are the following -----------------------------------------------------
-	game.Getplayer().modav("speedmult", 20)				; Fast Walk
-	game.Getplayer().modav("weaponspeedmult", 0.3)		; 
-	game.Getplayer().modav("leftweaponspeedmult", 0.3)	; Reflexes
-	game.Getplayer().setav("alterationpowermod", 50)	; Body Enhancement
-	game.Getplayer().modav("health", 50)				; 
-	game.Getplayer().modav("stamina", 50)				; Resilience
+	game.Getplayer().modav("speedmult", 20)										; Fast Walk
+	game.Getplayer().modav("weaponspeedmult", 0.3)								; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.3)							; Reflexes
+	game.Getplayer().setav("alterationpowermod", 50)							; Body Enhancement
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 50)		; 
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 50)	; Resilience
 	; Class starting items are the following ---------------------------------------------
 	game.Getplayer().additem(LeatherBoots, 1, true)
 	game.Getplayer().additem(LeatherCuirass, 1, true)
@@ -1365,13 +1365,13 @@ function NightBlade (Int ibutton)
 	game.Getplayer().modav("marksman", -10)
 	game.Getplayer().modav("heavyarmor", -10)
 	; Class skills are the following -----------------------------------------------------
-	game.Getplayer().modav("speedmult", 20)				; Fast Walk
-	game.Getplayer().modav("weaponspeedmult", 0.3)		; 
-	game.Getplayer().modav("leftweaponspeedmult", 0.3)	; Reflexes
-	game.Getplayer().setav("conjurationpowermod", 50)	; 
-	game.Getplayer().setav("illusionpowermod", 50)		; Spiritual Link
-	game.Getplayer().modav("magicka", 50)				; 
-	game.Getplayer().modav("stamina", 50)				; Hybrid Energy
+	game.Getplayer().modav("speedmult", 20)										; Fast Walk
+	game.Getplayer().modav("weaponspeedmult", 0.3)								; 
+	game.Getplayer().modav("leftweaponspeedmult", 0.3)							; Reflexes
+	game.Getplayer().setav("conjurationpowermod", 50)							; 
+	game.Getplayer().setav("illusionpowermod", 50)								; Spiritual Link
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 50)	;
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 50)	; Hybrid Energy
 	; Class starting items are the following ---------------------------------------------
 	game.Getplayer().additem(LeatherBoots, 1, true)
 	game.Getplayer().additem(LeatherCuirass, 1, true)
@@ -1407,11 +1407,11 @@ function Monk (Int ibutton)
 	game.Getplayer().modav("pickpocket", -5)
 	game.Getplayer().modav("illusion", -5)
 	; Class skills are the following -----------------------------------------------------
-	game.Getplayer().modav("attackdamagemult", 1.50)	; Brute Force
-	game.Getplayer().setav("alterationpowermod", 50)	; Body Enhancement
-	game.Getplayer().setav("restorationpowermod", 50)	; Healing Will
-	game.Getplayer().modav("magicka", 50)				; 
-	game.Getplayer().modav("health", 50)				; Spiritual Core
+	game.Getplayer().modav("attackdamagemult", 1.50)							; Brute Force
+	game.Getplayer().setav("alterationpowermod", 50)							; Body Enhancement
+	game.Getplayer().setav("restorationpowermod", 50)							; Healing Will
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 50)	; 
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 50)		; Spiritual Core
 	; Class starting items are the following ---------------------------------------------
 	game.Getplayer().additem(MonkBoots, 1, true)
 	game.Getplayer().additem(MonkRobes, 1, true)
@@ -1442,11 +1442,11 @@ function Pilgrim (Int ibutton)
 	game.Getplayer().modav("pickpocket", -5)
 	game.Getplayer().modav("illusion", -5)
 	; Class skills are the following -----------------------------------------------------
-	game.Getplayer().modav("attackdamagemult", 1.50)	; Brute Force
-	game.Getplayer().setav("alterationpowermod", 50)	; Body Enhancement
-	game.Getplayer().setav("conjurationpowermod", 50)	; Summoning Authority
-	game.Getplayer().modav("magicka", 50)				; 
-	game.Getplayer().modav("health", 50)				; Spiritual Core
+	game.Getplayer().modav("attackdamagemult", 1.50)							; Brute Force
+	game.Getplayer().setav("alterationpowermod", 50)							; Body Enhancement
+	game.Getplayer().setav("conjurationpowermod", 50)							; Summoning Authority
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 50)	; 
+	game.Getplayer().setav("health", game.Getplayer().getav("health") + 50)		; Spiritual Core
 	; Class starting items are the following ---------------------------------------------
 	game.Getplayer().additem(MonkBoots, 1, true)
 	game.Getplayer().additem(MonkRobes, 1, true)
@@ -1473,11 +1473,11 @@ function NatureArcher (Int ibutton)
 	game.Getplayer().modav("onehanded", -5)
 	game.Getplayer().modav("twohanded", -5)
 	; Class skills are the following -----------------------------------------------------
-	game.Getplayer().modav("critchance", 5)				; Luck
-	game.Getplayer().modav("magicka", 50)				; 
-	game.Getplayer().modav("stamina", 50)				; Hybrid Energy
-	game.Getplayer().modav("marksmanpowermod", 50)		; Bow Expertise
-	game.Getplayer().setav("conjurationpowermod", 50)	; Summoning Authority
+	game.Getplayer().modav("critchance", 5)										; Luck
+	game.Getplayer().setav("magicka", game.Getplayer().getav("magicka") + 50)	;
+	game.Getplayer().setav("stamina", game.Getplayer().getav("stamina") + 50)	; Hybrid Energy
+	game.Getplayer().modav("marksmanpowermod", 50)								; Bow Expertise
+	game.Getplayer().setav("conjurationpowermod", 50)							; Summoning Authority
 	; Class starting items are the following ---------------------------------------------
 	game.Getplayer().additem(HideBoots, 1, true)
 	game.Getplayer().additem(HideCuirass, 1, true)
@@ -1569,12 +1569,14 @@ function Mage (Int ibutton)
 		ibutton = DurielClassesChoiceMessage04Mage.Show()
 		if ibutton == 0
 			game.Getplayer().additem(TomeFlames, 1, true)
+			self.JobMenu(0)
 		elseif ibutton == 1
 			game.Getplayer().additem(TomeFrostbite, 1, true)
+			self.JobMenu(0)
 		elseif ibutton == 2
 			game.Getplayer().additem(TomeSparks, 1, true)
+			self.JobMenu(0)
 		endif
-		self.JobMenu(0)
 	endif
 
 endFunction
