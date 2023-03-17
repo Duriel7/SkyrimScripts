@@ -9,7 +9,7 @@ Points de santé : 120
 Points de vigueur : 20
 Points de mana : 210 (160 de base avec le bonus racial supplémentaire intrinsèque des Hauts Elfes de 50)
 Portage : 130
-Dommages à mains nues : 4
+Dommages à mains nues : 9
 Bonus aux compétences : Illusion +10, Conjuration, Destruction, Alteration, Guérison, Enchantement +5
 Spécial : 50 pourcents de réduction du coût des sorts
 
@@ -26,7 +26,7 @@ Points de santé : 90
 Points de vigueur : 120
 Points de mana : 90
 Portage : 150
-Dommages à mains nues : 4
+Dommages à mains nues : 9
 Bonus aux compétences : Archerie +10, Crochetage, Discrétion, Armure Légère, Pickpocket, Alchimie +5
 Spécial : 10 pourcents de réduction du coût des sorts
 
@@ -43,7 +43,7 @@ Points de santé : 90
 Points de vigueur : 70
 Points de mana : 140
 Portage : 170
-Dommages à mains nues : 5
+Dommages à mains nues : 9
 Bonus aux compétences : Destruction +10, Illusion, Alteration, Armure Légère, Discrétion, Alchimie +5
 Spécial : 30 pourcents de réduction du coût des sorts
 
@@ -60,7 +60,7 @@ Points de santé : 120
 Points de vigueur : 120
 Points de mana : 60
 Portage : 220
-Dommages à mains nues : 27 (10 + 12 pour les griffes = 22 de base, et bonus de 5)
+Dommages à mains nues : 32 (10 + 12 pour les griffes = 22 de base, et bonus de 10)
 Bonus aux compétences : Discrétion +10, Armes à Une Main, Pickpocket, Crochetage, Archerie, Alchimie +5
 Spécial : 10 dégâts de plus par les griffes
 
@@ -77,7 +77,7 @@ Points de santé : 140
 Points de vigueur : 120
 Points de mana : 40
 Portage : 220
-Dommages à mains nues : 17 (10 de base et bonus de 7)
+Dommages à mains nues : 25 (10 de base et bonus de 15)
 Bonus aux compétences : Crochetage +10, Armure Légère, Pickpocket, Discrétion, Alteration, Guérison +5
 Spécial :  15 dégâts de plus par les griffes
 
@@ -94,7 +94,7 @@ Points de santé : 150
 Points de vigueur : 130
 Points de mana : 20
 Portage : 250
-Dommages à mains nues : 9
+Dommages à mains nues : 19
 Bonus aux compétences : Armes à Deux Mains +10, Armure Légère, Armes à Une Main, Forge, Blocage, Eloquence +5
 Spécial : 10 pourcents d'efficacité de forge supplémentaire
 
@@ -111,7 +111,7 @@ Points de santé : 110
 Points de vigueur : 130
 Points de mana : 60
 Portage : 240
-Dommages à mains nues : 8
+Dommages à mains nues : 16
 Bonus aux compétences : Armes à Une Main +10, Blocage, Alteration, Archerie, Destruction, Forge +5
 Spécial : 10 pourcents d'efficacité de forge supplémentaire
 
@@ -128,7 +128,7 @@ Points de santé : 120
 Points de vigueur : 90
 Points de mana : 90
 Portage : 230
-Dommages à mains nues : 9
+Dommages à mains nues : 19
 Bonus aux compétences : Guérison +10, Destruction, Enchantement, Armure Lourde, Armes à Une Main, Blocage +5
 Spécial : 20 pourcents de réduction au coût des sorts de guérison
 
@@ -145,7 +145,7 @@ Points de santé : 90
 Points de vigueur : 70
 Points de mana : 140
 Portage : 200
-Dommages à mains nues : 6
+Dommages à mains nues : 14
 Bonus aux compétences : Conjuration +10, Guérison, Alteration, Illusion, Alchimie, Eloquence +5
 Spécial : 20 pourcents de réduction du coût des sorts
 
@@ -162,6 +162,6 @@ Points de santé : 160
 Points de vigueur : 120
 Points de mana : 20
 Portage : 280
-Dommages à mains nues : 11
+Dommages à mains nues : 24
 Bonus aux compétences : Armure Lourde +10, Forge, Blocage, Armes à Une Main, Armes à Deux Mains, Enchantement +5
 Spécial : 30 pourcents d'efficacité de forge supplémentaire
