@@ -61,6 +61,7 @@ Titre : Classes Physiques
 Texte :
 Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
 Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Attention : Les classes Physiques impliquent un malus de 100% à l'utilisation de la magie. Vous dépenserez 200% de points pour lancer un sort.
 Vous avez le choix entre ces sous-branches :
 
 ****************************************************************************************************************************************
@@ -94,6 +95,7 @@ Titre : Classes Hybrides Physique/Magie
 Texte :
 Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
 Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Attention : Les classes orientées Physique ont un malus de 70% à l'utilisation de la magie. Vous dépenserez 170% de points pour lancer un sort.
 Vous avez le choix entre ces classes :
 
 ****************************************************************************************************************************************
@@ -105,6 +107,7 @@ Titre : Classes Hybrides Magie/Physique
 Texte :
 Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
 Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Attention : Les classes orientées Magie ont un malus de 30% à l'utilisation de la magie. Vous dépenserez 130% de points pour lancer un sort.
 Vous avez le choix entre ces classes :
 
 ****************************************************************************************************************************************
@@ -116,6 +119,7 @@ Titre : Classes de Magie
 Texte :
 Choisissez votre classe en fonction de vos préférences, de vos envies, de vos talents.
 Il existe plusieurs branches qui vous mèneront aux classes. Chaque branche et classe est décrite dans les Rouleaux du Destin, mais un petit rappel vous permet rapidement de voir les points forts et faibles de chaque classe.
+Les classes Magiques n'ont aucun malus à l'utilisation de magie. Lancer un sort coûtera le même nombre de points que le jeu vanilla.
 Vous avez le choix entre ces classes :
 
 ****************************************************************************************************************************************
